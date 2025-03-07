@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/earlyaccess/cwtexyen.css");
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC+Rounded:wght@100;300;400;500;700;900&display=swap'); */
+
+/* font */
+:root {
+  --font-family: "cwTeXYen", "Noto Sans TC Rounded", sans-serif;
+}
+
+html,
+body {
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: var(--font-family);
+
+  width: 100%;
+  /* dvh / vh */
+  min-height: 100dvh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+/* 卡片樣式 */
+.card {
+  overflow: hidden;
+  height: 100%;
+  transition: transform 0.3s ease;
+  margin: 0 10px;
+}
+
+.swiper-slide {
+  opacity: 0.7;
+  /* transform: scale(0.9); */
+  transition: all 0.3s ease;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  /* transform: scale(1); */
+}
+
+/* 輪播按鈕樣式 */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  border: none;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+[class*="carousel-prev"] {
+  left: -40px;
+}
+
+[class*="carousel-next"] {
+  right: -40px;
+}
+
+/* 響應式調整 */
+@media (max-width: 1200px) {
+  .carousel-container {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 801px) {
+  .carousel-container {
+    padding: 10px;
+    max-width: 300px;
+  }
+
+  .carousel-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  [class*="carousel-prev"] {
+    left: -30px;
+  }
+
+  [class*="carousel-next"] {
+    right: -30px;
+  }
+}
+
+.swiper-slide{
+  opacity: 1;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #2eaa98;
+  transition: transform 0.3s ease;
+}
+
+a {
+cursor: pointer;
+}
