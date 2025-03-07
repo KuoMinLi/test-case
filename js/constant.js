@@ -22,6 +22,7 @@ const STORAGE_DATA = {
         gameSection: {
           title: "/test-case/images/mobile/2標題＿壓力大.png",
           background: "/test-case/images/mobile/2心測頁背景.webp",
+          card: "/test-case/images/mobile/手機板_封面.jpg",
         },
         freeSection: {
           product: "/test-case/images/mobile/3新品限量免費體驗.png",
@@ -87,6 +88,7 @@ const STORAGE_DATA = {
           background: "/test-case/images/desktop/03_心測小遊戲/03_艾瑪絲_壓力大頭皮屑也跟著控飆-01.webp",
           title: "/test-case/images/desktop/03_心測小遊戲/03_艾瑪絲_壓力大頭皮屑也跟著控飆-02.png",
           text: "/test-case/images/desktop/03_心測小遊戲/03_艾瑪絲_壓力大頭皮屑也跟著控飆-03.png",
+          card: "/test-case/images/desktop/03_心測小遊戲/網頁版_封面.jpg",
         },
         freeSection: {
           background: "/test-case/images/desktop/04_新品免費體驗/04_艾瑪絲_新品限量免費體驗-01.webp",

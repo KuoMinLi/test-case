@@ -260,9 +260,9 @@ const GameSection = ({ config }) => {
       <img
         src={config.desktop.gameSection.background}
         alt="background"
-        className="w-full object-cover lg:hidden block"
+        className="w-full object-cover md:hidden block"
       />
-      <div className="absolute top-0 left-0 w-full h-full lg:hidden block">
+      <div className="absolute top-0 left-0 w-full h-full md:hidden block">
         <div className="flex flex-col items-center gap-5 mt-[40px]">
           <img
             src={config.desktop.gameSection.title}
@@ -274,18 +274,28 @@ const GameSection = ({ config }) => {
             alt="text"
             className="w-[80%] h-auto"
           />
+          <img
+            src={config.desktop.gameSection.card}
+            alt="card"
+            className="lg:w-[70%] w-[80%] h-auto max-w-[1200px]"
+          />
         </div>
       </div>
       <img
         src={config.mobile.gameSection.background}
         alt="background"
-        className="w-full object-cover lg:block hidden"
+        className="w-full object-cover md:block hidden"
       />
-      <div className="absolute top-0 left-0 w-full h-full lg:block hidden">
+      <div className="absolute top-0 left-0 w-full h-full md:block hidden">
         <div className="flex flex-col items-center gap-5 mt-[10px]">
           <img
             src={config.mobile.gameSection.title}
             alt="title"
+            className="w-[80%] h-auto"
+          />
+          <img
+            src={config.mobile.gameSection.card}
+            alt="card"
             className="w-[80%] h-auto"
           />
         </div>
@@ -1063,7 +1073,7 @@ const SwiperContent = ({
   data,
   initialNumber = 3,
   id = "default",
-  className,
+  className="",
 }) => {
   const [slidesPerView, setSlidesPerView] = useState(initialNumber); // 預設顯示 3 個
   const swiperRef = useRef(null);
@@ -1189,8 +1199,8 @@ const VideoSection = memo(({ config }) => {
             alt="text"
             className="w-1/2 mx-auto lg:hidden block"
           />
-          <div className="relative w-1/2 max-w-[878px] mx-1 lg:mt-[27vw] mt-0">
-            <img src={config.desktop.videoSection.rowCard} alt="row-card" />
+          <div className="relative card:w-[80%] w-1/2 max-w-[878px] mx-1 lg:mt-[27vw] mt-0">
+            <img src={config.desktop.videoSection.rowCard} alt="row-card" className="w-full" />
             <img
               src={config.desktop.videoSection.card1title}
               alt="card1-title"
@@ -1236,10 +1246,8 @@ const VideoSection = memo(({ config }) => {
               data={carouselData}
               initialNumber={1}
               id="master"
-              className="max-w-[300px]"
             />
           </div>
-
           <SwiperContent config={config} data={carouselData} id="star" />
         </div>
       </div>
@@ -1560,6 +1568,7 @@ const App = () => {
   const [staticJson, setStaticJson] = useState(STORAGE_DATA);
 
   useEffect(() => {
+   
     const handleHashScroll = () => {
       if (window.location.hash) {
      
@@ -1574,7 +1583,7 @@ const App = () => {
             console.log(`Successfully scrolled to #${id}`);
           } else if (attemptCount < 5) {
             console.log(`Element #${id} not found, retrying... (${attemptCount + 1}/5)`);
-            setTimeout(() => scrollAttempt(attemptCount + 1), 500 * (attemptCount + 1));
+            setTimeout(() => scrollAttempt(attemptCount + 1), 300 * (attemptCount + 1));
           } else {
             console.warn(`Failed to find element #${id} after multiple attempts`);
           }
