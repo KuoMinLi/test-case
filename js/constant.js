@@ -17,11 +17,11 @@ const STORAGE_DATA = {
           level: "/test-case/images/mobile/1按鈕＿頭皮屑.png",
           real: "/test-case/images/mobile/1按鈕＿真人.png",
         },
-        banner: "/test-case/images/mobile/1主視覺.jpg",
+        banner: "/test-case/images/mobile/1主視覺.webp",
         ctaImage: "/test-case/images/mobile/1按鈕＿懸浮加賴.png",
         gameSection: {
           title: "/test-case/images/mobile/2標題＿壓力大.png",
-          background: "/test-case/images/mobile/2心測頁背景.png",
+          background: "/test-case/images/mobile/2心測頁背景.webp",
         },
         freeSection: {
           product: "/test-case/images/mobile/3新品限量免費體驗.png",
@@ -33,7 +33,7 @@ const STORAGE_DATA = {
           confirm: "/test-case/images/mobile/3按紐＿確認同意.png",
         },
         prizeSection: {
-          background: "/test-case/images/mobile/4洗後分享頁面.png",
+          background: "/test-case/images/mobile/4洗後分享頁面.webp",
           cta: "/test-case/images/mobile/4按鈕＿點我參加.png",
         },
         videoSection:{
@@ -47,15 +47,15 @@ const STORAGE_DATA = {
           card3title: "/test-case/images/mobile/5標題3（暫時款）.png",
         },
         recommendSection: {
-          background: "/test-case/images/mobile/6有感推薦底圖.png",
+          background: "/test-case/images/mobile/6有感推薦底圖.webp",
           card1title: "/test-case/images/mobile/6標題4（暫時款）.png",
           card2title: "/test-case/images/mobile/6標題5（暫時款）.png",
         },
         levelSection: {
-          background: "/test-case/images/mobile/7擺脫頭皮困擾.png",
+          background: "/test-case/images/mobile/7擺脫頭皮困擾.webp",
         },
         realSection: {
-          background: "/test-case/images/mobile/8真人證實.png",
+          background: "/test-case/images/mobile/8真人證實.webp",
         },
         footer: {
           background: "/test-case/images/mobile/9footer.png",
@@ -84,12 +84,12 @@ const STORAGE_DATA = {
         banner: "/test-case/images/desktop/02_主視覺/02_艾瑪絲_主視覺-懸浮按鈕.jpg",
         ctaImage: "/test-case/images/desktop/02_主視覺/02_艾瑪絲_主視覺-懸浮按鈕-02.png",
         gameSection: {
-          background: "/test-case/images/desktop/03_心測小遊戲/03_艾瑪絲_壓力大頭皮屑也跟著控飆-01.png",
+          background: "/test-case/images/desktop/03_心測小遊戲/03_艾瑪絲_壓力大頭皮屑也跟著控飆-01.webp",
           title: "/test-case/images/desktop/03_心測小遊戲/03_艾瑪絲_壓力大頭皮屑也跟著控飆-02.png",
           text: "/test-case/images/desktop/03_心測小遊戲/03_艾瑪絲_壓力大頭皮屑也跟著控飆-03.png",
         },
         freeSection: {
-          background: "/test-case/images/desktop/04_新品免費體驗/04_艾瑪絲_新品限量免費體驗-01.png",
+          background: "/test-case/images/desktop/04_新品免費體驗/04_艾瑪絲_新品限量免費體驗-01.webp",
           title: "/test-case/images/desktop/04_新品免費體驗/04_艾瑪絲_新品限量免費體驗-02.png",
           text: "/test-case/images/desktop/04_新品免費體驗/04_艾瑪絲_新品限量免費體驗-03.png",
           subText: "/test-case/images/desktop/04_新品免費體驗/04_艾瑪絲_新品限量免費體驗-04.png",
@@ -100,7 +100,7 @@ const STORAGE_DATA = {
           confirm: "/test-case/images/desktop/04_新品免費體驗/04_艾瑪絲_新品限量免費體驗-09.png",
         },
         prizeSection: {
-          background: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-01.png",
+          background: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-01.webp",
           title: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-02.png",
           text: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-03.png",
           card: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-04.png",
@@ -122,7 +122,7 @@ const STORAGE_DATA = {
           rightArrow: "/test-case/images/desktop/06_影音區/06_艾瑪絲_影音直擊有感分享-13.png",
         },
         recommendSection: {
-          background: "/test-case/images/desktop/07_圖文區/07_艾瑪絲_有感推薦無藥去屑更安心-01.png",
+          background: "/test-case/images/desktop/07_圖文區/07_艾瑪絲_有感推薦無藥去屑更安心-01.webp",
           title: "/test-case/images/desktop/07_圖文區/07_艾瑪絲_有感推薦無藥去屑更安心-02.png",
           text: "/test-case/images/desktop/07_圖文區/07_艾瑪絲_有感推薦無藥去屑更安心-03.png",
           rowCard: "/test-case/images/desktop/07_圖文區/07_艾瑪絲_有感推薦無藥去屑更安心-04.png",
@@ -133,14 +133,14 @@ const STORAGE_DATA = {
           card5title: "/test-case/images/desktop/07_圖文區/07_艾瑪絲_有感推薦無藥去屑更安心-09.png",
         },
         levelSection: {
-          background: "/test-case/images/desktop/08_頭皮檢測區/08_艾瑪絲_擺脫頭皮困擾重啟健康頭皮能量-01.png",
+          background: "/test-case/images/desktop/08_頭皮檢測區/08_艾瑪絲_擺脫頭皮困擾重啟健康頭皮能量-01.webp",
           title: "/test-case/images/desktop/08_頭皮檢測區/08_艾瑪絲_擺脫頭皮困擾重啟健康頭皮能量-02.png",
           text: "/test-case/images/desktop/08_頭皮檢測區/08_艾瑪絲_擺脫頭皮困擾重啟健康頭皮能量-03.png",
           subText: "/test-case/images/desktop/08_頭皮檢測區/08_艾瑪絲_擺脫頭皮困擾重啟健康頭皮能量-04.png",
           image: "/test-case/images/desktop/08_頭皮檢測區/08_艾瑪絲_擺脫頭皮困擾重啟健康頭皮能量-05.png",
         },
         realSection: {
-          background: "/test-case/images/desktop/09_真人實證區/09_艾瑪絲_真人實證去屑超有感.png",
+          background: "/test-case/images/desktop/09_真人實證區/09_艾瑪絲_真人實證去屑超有感.webp",
         },
         footer: {
           background: "/test-case/images/desktop/10_footer/10_艾瑪絲_Fotter-01.png",
