@@ -1562,23 +1562,37 @@ const App = () => {
   useEffect(() => {
     const handleHashScroll = () => {
       if (window.location.hash) {
-        const id = window.location.hash.replace(/^#\/?/, '');
-        const element = document.getElementById(id);
+     
+        const hashValue = window.location.hash;
+        const id = hashValue.replace(/^#\/?/, '');
         
-        if (element) {
-          setTimeout(() => {
+        const scrollAttempt = (attemptCount = 0) => {
+          const element = document.getElementById(id);
+          
+          if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
-          }, 500);
-        }
+            console.log(`Successfully scrolled to #${id}`);
+          } else if (attemptCount < 5) {
+            console.log(`Element #${id} not found, retrying... (${attemptCount + 1}/5)`);
+            setTimeout(() => scrollAttempt(attemptCount + 1), 500 * (attemptCount + 1));
+          } else {
+            console.warn(`Failed to find element #${id} after multiple attempts`);
+          }
+        };
+        
+        scrollAttempt();
       }
     };
-
-    handleHashScroll();
     
+    window.addEventListener('load', handleHashScroll);
     window.addEventListener('hashchange', handleHashScroll);
-   
+    
+    const timeoutId = setTimeout(handleHashScroll, 1000);
+    
     return () => {
+      window.removeEventListener('load', handleHashScroll);
       window.removeEventListener('hashchange', handleHashScroll);
+      clearTimeout(timeoutId);
     };
   }, []);
 
