@@ -1558,6 +1558,30 @@ const Footer = ({ config }) => {
 
 const App = () => {
   const [staticJson, setStaticJson] = useState(STORAGE_DATA);
+
+  useEffect(() => {
+    const handleHashScroll = () => {
+      if (window.location.hash) {
+        const id = window.location.hash.replace(/^#\/?/, '');
+        const element = document.getElementById(id);
+        
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 500);
+        }
+      }
+    };
+
+    handleHashScroll();
+    
+    window.addEventListener('hashchange', handleHashScroll);
+   
+    return () => {
+      window.removeEventListener('hashchange', handleHashScroll);
+    };
+  }, []);
+
   return (
     <div>
       <Header config={staticJson.config} />
