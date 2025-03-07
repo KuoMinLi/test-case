@@ -223,10 +223,10 @@ const Banner = ({ config }) => {
       <img
         src={config.desktop.banner}
         alt="background"
-        className="w-full object-cover md:hidden block"
+        className="w-full object-cover card:hidden block object-cover object-top h-[100dvh]"
       />
       <button
-        className="fixed z-50 bottom-10 right-5 md:hidden block"
+        className="fixed z-50 bottom-10 right-5 card:hidden block"
         onClick={() => window.open(config.links.line)}
       >
         <img
@@ -238,10 +238,10 @@ const Banner = ({ config }) => {
       <img
         src={config.mobile.banner}
         alt="background"
-        className="w-full h-[100dvh] object-cover object-top md:block hidden mt-[calc(2vw-30px)]"
+        className="w-full h-[calc(100dvh+30px)] object-cover object-top card:block hidden mt-[calc(2vw-30px)]"
       />
       <button
-        className="fixed z-50 bottom-5 right-2 md:block hidden"
+        className="fixed z-50 bottom-5 right-2 card:block hidden"
         onClick={() => window.open(config.links.line)}
       >
         <img
@@ -313,22 +313,22 @@ const PrizeSection = ({ config }) => {
         className="w-full object-cover md:hidden block"
       />
       <div className="absolute top-0 left-0 w-full h-full md:hidden block">
-        <div className="flex flex-col items-center gap-5 mt-[40px]">
+        <div className="flex flex-col items-center mt-[40px]">
           <img
             src={config.desktop.prizeSection.title}
             alt="title"
-            className="w-[80%] h-auto"
+            className="w-[70%] h-auto"
           />
           <img
             src={config.desktop.prizeSection.text}
             alt="text"
-            className="w-[80%] h-auto"
+            className="w-[70%] h-auto -mt-[40px]"
           />
-          <div className="relative w-full">
+          <div className="relative w-full -mt-[20px]">
             <img
               src={config.desktop.prizeSection.card}
               alt="card"
-              className="w-[80%] h-auto mx-auto"
+              className="w-[70%] h-auto mx-auto"
             />
             <img
               src={config.desktop.prizeSection.cta}
