@@ -1818,7 +1818,7 @@ const PsychologicalGame = ({ onClose }) => {
 
       // 如果所有類別都有分數，並且最高和最低分的差距小於某個閾值（例如 4 分），則視為"都有"類型
       if (hasAllCategories && maxScore - minScore <= 4) {
-        return "../images/result/O-feast.png"; // 甚麼都有的辦桌流水席
+        return `${staticJson.config.result.result0}`; // 甚麼都有的辦桌流水席
       }
 
       // 依據最高分類別（或平局情況下的決勝類別）返回相應的結果圖片
