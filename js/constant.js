@@ -26,10 +26,10 @@ const STORAGE_DATA = {
         },
         freeSection: {
           product: "/test-case/images/mobile/3新品限量免費體驗.png",
-          background: "/test-case/images/mobile/3申請表單底圖.png",
+          background: "/test-case/images/mobile/3申請表單底圖.webp",
           tableBackground: "/test-case/images/mobile/3申請試用框.png",
-          ctaProduct: "/test-case/images/mobile/3按鈕＿立即申請.png",
-          ctaFree: "/test-case/images/mobile/3按紐＿了解去屑.png",
+          ctaFree: "/test-case/images/mobile/3按鈕＿立即申請.png",
+          ctaProduct: "/test-case/images/mobile/3按紐＿了解去屑.png",
           ctaNote: "/test-case/images/mobile/3跳出視窗.png",
           confirm: "/test-case/images/mobile/3按紐＿確認同意.png",
         },
@@ -38,7 +38,7 @@ const STORAGE_DATA = {
           cta: "/test-case/images/mobile/4按鈕＿點我參加.png",
         },
         videoSection:{
-          background: "/test-case/images/mobile/5影音直擊底圖.png",
+          background: "/test-case/images/mobile/5影音直擊底圖.webp",
           leftArrow: "/test-case/images/mobile/5左鍵.png",
           rightArrow: "/test-case/images/mobile/5右鍵.png",
           rowCard: "/test-case/images/mobile/5橫式影片框.png",
@@ -109,7 +109,7 @@ const STORAGE_DATA = {
           cta: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-05.png",
         },
         videoSection: {
-          background: "/test-case/images/desktop/06_影音區/06_艾瑪絲_影音直擊有感分享-01.png",
+          background: "/test-case/images/desktop/06_影音區/06_艾瑪絲_影音直擊有感分享-01.webp",
           title: "/test-case/images/desktop/06_影音區/06_艾瑪絲_影音直擊有感分享-02.png",
           text: "/test-case/images/desktop/06_影音區/06_艾瑪絲_影音直擊有感分享-03.png",
           rowCard: "/test-case/images/desktop/06_影音區/06_艾瑪絲_影音直擊有感分享-04.png",
@@ -145,7 +145,7 @@ const STORAGE_DATA = {
           background: "/test-case/images/desktop/09_真人實證區/09_艾瑪絲_真人實證去屑超有感.webp",
         },
         footer: {
-          background: "/test-case/images/desktop/10_footer/10_艾瑪絲_Fotter-01.png",
+          background: "/test-case/images/desktop/10_footer/10_艾瑪絲_Fotter-01.webp",
           icon: "/test-case/images/desktop/10_footer/10_艾瑪絲_Fotter-02.png",
           line: "/test-case/images/desktop/10_footer/10_艾瑪絲_Fotter-03.png",
           ig: "/test-case/images/desktop/10_footer/10_艾瑪絲_Fotter-04.png",
@@ -161,7 +161,9 @@ const STORAGE_DATA = {
         prize: "https://events.aromase.com.tw/p/scalp_dandruff-285?utm_source=website&utm_medium=scalpdandruff&utm_campaign=fever",
         ig: "https://www.instagram.com/aromasetw/?hl=zh-tw",
         yt: "https://www.youtube.com/channel/UCQNUfzP5_AOQZzf1Rb79s5w",
-        messager: "m.me/146697988676586",
+        messager: "https://m.me/146697988676586",
+        PARTICIPATE: "https://events.aromase.com.tw/p/scalp_dandruff-285?utm_source=website&utm_medium=scalpdandruff&utm_campaign=fever",
+        PRODUCT: "https://www.aromase.com.tw/categories/scalp-dandruff?utm_source=website&utm_medium=scalpdandruff&utm_campaign=product",  
       }
     },
   };
