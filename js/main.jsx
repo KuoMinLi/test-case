@@ -995,14 +995,14 @@ const FreeSection = memo(({ config, handleShowNote }) => {
           />
           <div className="mx-auto rounded-lg p-6 relative w-full max-w-[800px]">
             <img
-              className="absolute top-[15vw] inset-x-0 sm:h-[480px] h-auto w-full object-cover bg-repeat-y  mx-auto max-w-[400px]"
+              className="absolute top-[17vw] inset-x-0 sm:h-[480px] h-auto w-full object-cover bg-repeat-y  mx-auto max-w-[400px]"
               src={config.mobile.freeSection.tableBackground}
               alt="tableBackground"
             />
             <form
               onSubmit={handleSubmit}
               className="mx-2  max-w-[320px] mx-auto"
-              style={{ marginTop: "calc(15vw + 20px)" }}
+              style={{ marginTop: "calc(17vw + 20px)" }}
             >
               <div className="flex flex-col flex-wrap gap-y-2 pt-2 sm:px-1 px-4">
                 <div className="flex items-center">
@@ -1998,7 +1998,7 @@ const PsychologicalGame = ({ onClose }) => {
           />
           <button
             onClick={onClose}
-            className="absolute top-[5%] right-[5%] text-black text-3xl"
+            className="absolute top-[2%] right-[5%] text-black text-3xl"
           >
             X
           </button>
@@ -3034,7 +3034,6 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
         await navigator.share({
           title: "「打工人」壓力測試！你的職場菜色是?",
           text: `測看看你的「職場壓力鍋菜色」是哪一道：https://event.ttshow.tw/scalp_dandruff#game`,
-          url: window.location.href,
           files: [file],
         });
       }
@@ -3047,7 +3046,6 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
           await navigator.share({
             title: "「打工人」壓力測試！你的職場菜色是?",
             text: `測看看你的「職場壓力鍋菜色」是哪一道：https://event.ttshow.tw/scalp_dandruff#game`,
-            url: window.location.href,
           });
         } catch (shareError) {
           console.error("Text share failed:", shareError);
