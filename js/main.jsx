@@ -173,7 +173,7 @@ const Header = ({ config }) => {
           </div>
         </div>
       </header>
-      <header className="w-full bg-[#69B4A7] lg:block hidden">
+      <header className="w-full bg-[#69B4A7] shadow-[0_8px_20px_0_rgba(65,71,66,0.6)] lg:block hidden">
         <div className="flex items-center justify-between px-4 py-2">
           <a href="#header">
             <img
@@ -330,7 +330,7 @@ const Banner = ({ config }) => {
       <img
         src={config.mobile.banner}
         alt="background"
-        className="w-full h-[calc(100dvh+30px)] object-cover object-top card:block hidden mt-[calc(2vw-30px)]"
+        className="w-full h-[calc(100dvh+30px)] object-cover object-top card:block hidden mt-[calc(20px-4vw)]"
       />
       <button
         className="fixed z-50 bottom-5 right-2 card:block hidden"
@@ -1360,7 +1360,7 @@ const RecommendSection = memo(({ config }) => {
         <img
           src={config.desktop.recommendSection.background}
           alt="background"
-          className="absolute relative w-full h-full object-cover bg-repeat-y"
+          className="absolute relative w-full object-cover bg-repeat-y"
         />
         <div className="z-10 absolute top-0 left-0 w-full flex flex-col items-center justify-center">
           <img
@@ -1482,12 +1482,12 @@ const LevelSection = memo(({ config }) => {
         <img
           src={config.desktop.levelSection.background}
           alt="background"
-          className="w-full h-full object-cover bg-repeat-y lg:hidden block"
+          className="w-full object-cover bg-repeat-y lg:hidden block"
         />
         <img
           src={config.mobile.levelSection.background}
           alt="background"
-          className="w-full h-full object-cover bg-repeat-y lg:block hidden"
+          className="w-full object-cover bg-repeat-y lg:block hidden"
         />
         <div className="z-10 absolute top-0 left-0 w-full flex flex-col items-center justify-center lg:hidden block">
           <div className="max-w-[1000px] mx-auto px-6">
@@ -1529,12 +1529,12 @@ const RealSection = memo(({ config }) => {
         <img
           src={config.desktop.realSection.background}
           alt="background"
-          className="w-full h-full object-cover bg-repeat-y md:hidden block -mt-[7.5vw]"
+          className="w-full object-cover bg-repeat-y md:hidden block -mt-[7.5vw]"
         />
         <img
           src={config.mobile.realSection.background}
           alt="background"
-          className="w-full h-full object-cover bg-repeat-y md:block hidden"
+          className="w-full object-cover bg-repeat-y md:block hidden"
         />
       </div>
     </div>
@@ -1548,7 +1548,7 @@ const Footer = ({ config }) => {
         <img
           src={config.desktop.footer.background}
           alt="background"
-          className="w-full h-full object-cover bg-repeat-y"
+          className="w-full object-cover bg-repeat-y"
         />
         <button
           className="absolute w-[31%] h-[48%] "
@@ -1608,7 +1608,7 @@ const Footer = ({ config }) => {
         <img
           src={config.mobile.footer.background}
           alt="background"
-          className="w-full h-full object-cover bg-repeat-y"
+          className="w-full object-cover bg-repeat-y"
         />
         <button
           className="absolute w-[73%] h-[35%]"
@@ -1623,21 +1623,21 @@ const Footer = ({ config }) => {
               <img
                 src={config.mobile.footer.icon}
                 alt="icon"
-                className="w-[50px]"
+                className="w-[40px]"
               />
             </a>
             <a onClick={() => window.open(config.links.line)}>
               <img
                 src={config.mobile.footer.line}
                 alt="icon"
-                className="w-[50px]"
+                className="w-[40px]"
               />
             </a>
             <a onClick={() => window.open(config.links.ig)}>
               <img
                 src={config.mobile.footer.ig}
                 alt="icon"
-                className="w-[50px]"
+                className="w-[40px]"
               />
             </a>
           </div>
@@ -1646,21 +1646,21 @@ const Footer = ({ config }) => {
               <img
                 src={config.mobile.footer.yt}
                 alt="icon"
-                className="w-[50px]"
+                className="w-[40px]"
               />
             </a>
             <a onClick={() => window.open(config.links.fb)}>
               <img
                 src={config.mobile.footer.fb}
                 alt="icon"
-                className="w-[50px]"
+                className="w-[40px]"
               />
             </a>
             <a onClick={() => window.open(config.links.messager)}>
               <img
                 src={config.mobile.footer.messager}
                 alt="icon"
-                className="w-[50px]"
+                className="w-[40px]"
               />
             </a>
           </div>
@@ -1818,7 +1818,7 @@ const PsychologicalGame = ({ onClose }) => {
 
       // 如果所有類別都有分數，並且最高和最低分的差距小於某個閾值（例如 4 分），則視為"都有"類型
       if (hasAllCategories && maxScore - minScore <= 4) {
-        return "/test-case/images/result/O-feast.png"; // 甚麼都有的辦桌流水席
+        return "../images/result/O-feast.png"; // 甚麼都有的辦桌流水席
       }
 
       // 依據最高分類別（或平局情況下的決勝類別）返回相應的結果圖片
