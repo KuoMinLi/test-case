@@ -1069,7 +1069,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                 </div>
                 <div className="flex items-center">
                   <div className="relative w-[100px] text-teal text-bold mr-2 h-[28px]">
-                    申請體驗
+                    申請產品
                   </div>
                   <ProductTypeSelector
                     onChange={handleChange}
