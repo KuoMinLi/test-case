@@ -104,6 +104,48 @@
         plugins: [],
       };
     </script>
+    <script>
+      (function () {
+        const observer = new MutationObserver(function (mutations) {
+          mutations.forEach(function (mutation) {
+            removePopups();
+          });
+        });
+
+        function removePopups() {
+          const popups = document.querySelectorAll(
+            ".td_custom_20250116_popup_init, .td_custom_20250116_popup_app"
+          );
+
+          popups.forEach(function (popup) {
+            popup.remove();
+          });
+
+          const linkBlacklist = ["maac.io"];
+          const links = document.querySelectorAll('a[href*="maac.io"]');
+
+          links.forEach(function (link) {
+            link.href = "javascript:void(0)";
+            link.target = "";
+            link.onclick = function (e) {
+              e.preventDefault();
+              return false;
+            };
+          });
+        }
+
+        removePopups();
+
+        observer.observe(document.documentElement, {
+          childList: true,
+          subtree: true,
+        });
+
+        window.addEventListener("load", removePopups);
+
+        setInterval(removePopups, 5000);
+      })();
+    </script>
   </head>
   <body>
     <!-- react 進入點 -->
