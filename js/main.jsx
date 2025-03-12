@@ -834,7 +834,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
         className={`lg:-mt-[${headerHight}px] -mt-[${headerHightDesktop}px] absolute top-0`}
         id="free"
       />
-      <div className="lg:hidden block">
+      <div className="w-full lg:hidden block">
         <div className="relative w-full">
           <img
             src={config.desktop.freeSection.background}
@@ -984,13 +984,13 @@ const FreeSection = memo(({ config, handleShowNote }) => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block -mt-[3%]">
+      <div className="w-full hidden lg:block -mt-[3%]">
         <img
           src={config.mobile.freeSection.product}
           alt="product"
           className="w-full object-cover"
         />
-        <div className="relative w-full px-2">
+        <div className="relative w-full">
           <img
             src={config.mobile.freeSection.background}
             alt="background"
@@ -998,7 +998,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
           />
           <div className="absolute top-0 left-0 mx-auto rounded-lg p-6  w-full max-w-[800px]">
             <img
-              className="absolute top-[18vw] inset-x-0 sm:h-[480px] h-auto w-full object-cover bg-repeat-y  mx-auto max-w-[420px]"
+              className="absolute top-[18vw] inset-x-0 sm:h-[480px] h-auto w-full object-cover bg-repeat-y  mx-auto sm:max-w-[370px] max-w-[420px]"
               src={config.mobile.freeSection.tableBackground}
               alt="tableBackground"
             />
