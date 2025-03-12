@@ -97,8 +97,8 @@ const Header = ({ config }) => {
               className="w-[240px] h-auto"
             />
           </a>
-          <div className="flex items-center justify-end gap-4">
-            <div className="flex items-center gap-2">
+          <div className="flex items-center justify-end gap-5">
+            <div className="flex items-center">
               <a href="#gameSection">
                 <div className="toggle-pair">
                   <img
@@ -156,20 +156,22 @@ const Header = ({ config }) => {
                 className="w-[60px] h-auto pt-[10px]"
               />
             </a>
-            <a onClick={() => window.open(config.links.official)}>
-              <img
-                src={config.desktop.header.icon}
-                alt="logo"
-                className="w-[50px] h-auto pt-[10px]"
-              />
-            </a>
-            <a onClick={() => window.open(config.links.fb)}>
-              <img
-                src={config.desktop.header.fb}
-                alt="logo"
-                className="w-[50px] h-auto pt-[10px]"
-              />
-            </a>
+            <div className="flex items-center -space-x-3">
+              <a onClick={() => window.open(config.links.official)}>
+                <img
+                  src={config.desktop.header.icon}
+                  alt="logo"
+                  className="w-[50px] h-auto pt-[10px]"
+                />
+              </a>
+              <a onClick={() => window.open(config.links.fb)}>
+                <img
+                  src={config.desktop.header.fb}
+                  alt="logo"
+                  className="w-[50px] h-auto pt-[10px]"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -315,7 +317,7 @@ const Banner = ({ config }) => {
       <img
         src={config.desktop.banner}
         alt="background"
-        className="w-full object-cover card:hidden block object-cover object-top h-[100dvh]"
+        className="w-full object-cover card:hidden block object-cover object-top h-[100vh]"
       />
       <button
         className="fixed z-50 bottom-10 right-5 card:hidden block"
@@ -324,13 +326,13 @@ const Banner = ({ config }) => {
         <img
           src={config.desktop.ctaImage}
           alt="ctaImage"
-          className="w-[120px] h-auto"
+          className="w-[150px] h-auto"
         />
       </button>
       <img
         src={config.mobile.banner}
         alt="background"
-        className="w-full h-[calc(100dvh+30px)] object-cover object-top card:block hidden mt-[calc(20px-4vw)]"
+        className="w-full h-[calc(100vh+30px)] object-cover object-top card:block hidden mt-[calc(20px-4vw)]"
       />
       <button
         className="fixed z-50 bottom-5 right-2 card:block hidden"
@@ -356,9 +358,9 @@ const GameSection = ({ config, onCardClick = false }) => {
       <img
         src={config.desktop.gameSection.background}
         alt="background"
-        className="w-full object-cover md:hidden block"
+        className="w-full object-cover lg:hidden block"
       />
-      <div className="absolute top-0 left-0 w-full h-full md:hidden block">
+      <div className="absolute top-0 left-0 w-full h-full lg:hidden block">
         <div className="flex flex-col items-center gap-5 mt-[40px]">
           <img
             src={config.desktop.gameSection.title}
@@ -384,9 +386,9 @@ const GameSection = ({ config, onCardClick = false }) => {
       <img
         src={config.mobile.gameSection.background}
         alt="background"
-        className="w-full object-cover md:block hidden"
+        className="w-full object-cover lg:block hidden"
       />
-      <div className="absolute top-0 left-0 w-full h-full md:block hidden">
+      <div className="absolute top-0 left-0 w-full lg:block hidden">
         <div className="flex flex-col items-center w-full h-full gap-5 mt-[10px]">
           <img
             src={config.mobile.gameSection.title}
@@ -410,7 +412,7 @@ const GameSection = ({ config, onCardClick = false }) => {
 
 const PrizeSection = ({ config }) => {
   return (
-    <div className="relative w-full -mt-[10px] z-10">
+    <div className="relative w-full -mt-[2.1%] z-1">
       <div
         className={`lg:-mt-[${headerHight}px] -mt-[${headerHightDesktop}px] absolute top-0`}
         id="prize"
@@ -421,7 +423,7 @@ const PrizeSection = ({ config }) => {
         className="w-full object-cover lg:hidden block"
       />
       <div className="absolute top-0 left-0 w-full h-full lg:hidden block">
-        <div className="flex flex-col items-center mt-[40px]">
+        <div className="flex flex-col items-center mt-[60px]">
           <img
             src={config.desktop.prizeSection.title}
             alt="title"
@@ -673,13 +675,13 @@ const ProductTypeSelector = ({
   value,
 }) => {
   const productOptions = [
-    { value: "乾屑", label: "乾屑" },
-    { value: "油屑", label: "油屑" },
+    { value: "乾性頭皮屑", label: "乾性頭皮屑" },
+    { value: "油性頭皮屑", label: "油性頭皮屑" },
   ];
 
   return (
     <CustomSelector
-      title="申請體驗產品(乾屑/油屑)"
+      title="申請產品"
       options={productOptions}
       onChange={onChange}
       name="experience"
@@ -827,7 +829,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
   };
 
   return (
-    <div className="relative w-full -mt-[30px] z-10">
+    <div className="relative w-full z-2">
       <div
         className={`lg:-mt-[${headerHight}px] -mt-[${headerHightDesktop}px] absolute top-0`}
         id="free"
@@ -864,9 +866,9 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                 />
                 <form
                   onSubmit={handleSubmit}
-                  className="space-y-2 mx-2 mt-[50px] max-w-[680px] mx-auto"
+                  className="mx-2 mt-[50px] max-w-[680px] mx-auto"
                 >
-                  <div className="grid grid-cols-2 gap-y-2 gap-x-4 pt-2">
+                  <div className="grid grid-cols-2 gap-y-2 gap-x-4 pt-2 mb-2">
                     <CustomInput
                       label="姓名："
                       placeholder="姓名"
@@ -881,7 +883,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                     />
                     <CustomInput
                       label="電話："
-                      placeholder="電話 09xxxxxxxx"
+                      placeholder="09xxxxxxxx"
                       onChange={handleChange}
                       value={formData.phone}
                       name="phone"
@@ -899,9 +901,10 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                     <ProductTypeSelector
                       onChange={handleChange}
                       value={formData.experience}
+                      placeholder="油屑/乾屑"
                     />
                   </div>
-                  <div className="flex w-full gap-4">
+                  <div className="flex w-full gap-4 mb-1">
                     <div className="w-1/3">
                       <CustomInput
                         label="郵遞區號(3碼)："
@@ -924,7 +927,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                   </div>
 
                   {/* Notes section */}
-                  <div className="mt-6  rounded text-sm relative text-[#094A42]">
+                  <div className="rounded text-sm relative text-[#094A42] mb-[2px]">
                     <div className="flex items-baseline mb-1">
                       <div className="mr-2 mt-1 relative">
                         <input
@@ -981,7 +984,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block">
+      <div className="hidden lg:block -mt-[3%]">
         <img
           src={config.mobile.freeSection.product}
           alt="product"
@@ -991,18 +994,18 @@ const FreeSection = memo(({ config, handleShowNote }) => {
           <img
             src={config.mobile.freeSection.background}
             alt="background"
-            className="absolute top-0 left-0 w-full object-cover object-top bg-repeat-space sm:h-[740px] h-auto"
+            className="relative w-full object-cover object-top bg-repeat-space sm:h-[700px] h-auto"
           />
-          <div className="mx-auto rounded-lg p-6 relative w-full max-w-[800px]">
+          <div className="absolute top-0 left-0 mx-auto rounded-lg p-6  w-full max-w-[800px]">
             <img
-              className="absolute top-[17vw] inset-x-0 sm:h-[480px] h-auto w-full object-cover bg-repeat-y  mx-auto max-w-[400px]"
+              className="absolute top-[18vw] inset-x-0 sm:h-[480px] h-auto w-full object-cover bg-repeat-y  mx-auto max-w-[420px]"
               src={config.mobile.freeSection.tableBackground}
               alt="tableBackground"
             />
             <form
               onSubmit={handleSubmit}
               className="mx-2  max-w-[320px] mx-auto"
-              style={{ marginTop: "calc(17vw + 20px)" }}
+              style={{ marginTop: "calc(18vw + 20px)" }}
             >
               <div className="flex flex-col flex-wrap gap-y-2 pt-2 sm:px-1 px-4">
                 <div className="flex items-center">
@@ -1057,7 +1060,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                   </div>
                   <CustomInput
                     label="電話："
-                    placeholder="電話 09xxxxxxxx"
+                    placeholder="09xxxxxxxx"
                     onChange={handleChange}
                     value={formData.phone}
                     name="phone"
@@ -1070,7 +1073,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                   </div>
                   <ProductTypeSelector
                     onChange={handleChange}
-                    placeholder="申請體驗產品(乾屑/油屑)"
+                    placeholder="油屑/乾屑"
                     className="h-[30px]"
                     value={formData.experience}
                   />
@@ -1103,7 +1106,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
 
               {/* Notes section */}
               <div className="mt-2 rounded text-xs relative text-[#094A42]">
-                <div className="flex items-baseline mb-1">
+                <div className="flex items-baseline mb-2">
                   <div className="mr-2 mt-1 relative">
                     <input
                       type="checkbox"
@@ -1956,12 +1959,6 @@ const PsychologicalGame = ({ onClose }) => {
           onStart={handleStart}
           currentQuestionIndex={currentQuestionIndex}
         />
-        <button
-          onClick={onClose}
-          className="absolute top-[5%] right-[5%] text-black text-3xl"
-        >
-          X
-        </button>
       </div>
     );
   }
@@ -2622,26 +2619,26 @@ const FromBlock = ({ openPopup }) => {
         <div className="absolute top-[47%] left-[66%] w-[26%] h-[3%] flex">
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-1 transform -translate-y-1/2 text-black">
-              {formData.experience === "油屑" ? "✓" : ""}
+              {formData.experience === "油性頭皮屑" ? "✓" : ""}
             </span>
             <input
               type="radio"
               name="experience"
-              value="油屑"
-              checked={formData.experience === "油屑"}
+              value="油性頭皮屑"
+              checked={formData.experience === "油性頭皮屑"}
               onChange={handleChange}
               className="absolute inset-0 opacity-0 cursor-pointer"
             />
           </div>
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-[8px] transform -translate-y-1/2 text-black">
-              {formData.experience === "乾屑" ? "✓" : ""}
+              {formData.experience === "乾性頭皮屑" ? "✓" : ""}
             </span>
             <input
               type="radio"
               name="experience"
-              value="乾屑"
-              checked={formData.experience === "乾屑"}
+              value="乾性頭皮屑"
+              checked={formData.experience === "乾性頭皮屑"}
               onChange={handleChange}
               className="absolute inset-0 opacity-0 cursor-pointer"
             />
@@ -2873,26 +2870,26 @@ const FromBlock = ({ openPopup }) => {
         <div className="absolute top-[44%] left-[31%] w-[33%] h-[3%] flex">
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-1 transform -translate-y-1/2 text-black">
-              {formData.experience === "油屑" ? "✓" : ""}
+              {formData.experience === "油性頭皮屑" ? "✓" : ""}
             </span>
             <input
               type="radio"
               name="experience"
-              value="油屑"
-              checked={formData.experience === "油屑"}
+              value="油性頭皮屑"
+              checked={formData.experience === "油性頭皮屑"}
               onChange={handleChange}
               className="absolute inset-0 opacity-0 cursor-pointer"
             />
           </div>
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-[8px] transform -translate-y-1/2 text-black">
-              {formData.experience === "乾屑" ? "✓" : ""}
+              {formData.experience === "乾性頭皮屑" ? "✓" : ""}
             </span>
             <input
               type="radio"
               name="experience"
-              value="乾屑"
-              checked={formData.experience === "乾屑"}
+              value="乾性頭皮屑"
+              checked={formData.experience === "乾性頭皮屑"}
               onChange={handleChange}
               className="absolute inset-0 opacity-0 cursor-pointer"
             />
@@ -3027,21 +3024,6 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
   const handleShare = async () => {
     try {
       if (navigator.share) {
-        // 嘗試將圖片轉為Blob以便分享
-        const blob = await fetch(resultImage).then((r) => r.blob());
-        const file = new File([blob], "result.png", { type: "image/png" });
-
-        await navigator.share({
-          title: "「打工人」壓力測試！你的職場菜色是?",
-          text: `測看看你的「職場壓力鍋菜色」是哪一道：https://event.ttshow.tw/scalp_dandruff#game`,
-          files: [file],
-        });
-      }
-    } catch (error) {
-      console.error("Share Failed:", error);
-
-      // 如果無法分享檔案，則嘗試只分享文字和URL
-      if (navigator.share) {
         try {
           await navigator.share({
             title: "「打工人」壓力測試！你的職場菜色是?",
@@ -3051,6 +3033,8 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
           console.error("Text share failed:", shareError);
         }
       }
+    } catch (error) {
+      console.error("Share Failed:", error);
     }
   };
 
@@ -3079,7 +3063,7 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
       // 創建下載元素
       const a = document.createElement("a");
       a.href = downloadUrl;
-      a.download = "result.png";
+      a.download = "請上菜，你的職場菜色是？.png";
       document.body.appendChild(a);
       a.click();
 
