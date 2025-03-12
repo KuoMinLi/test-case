@@ -2105,7 +2105,7 @@ const StartPage = memo(({ config, onStart, currentQuestionIndex }) => {
             currentQuestionIndex={currentQuestionIndex}
           />
           <button
-            className="absolute bottom-[10%] left-[27%] w-[46%] h-[7%] rounded-full"
+            className="absolute bottom-[8%] left-[20%] w-[60%] h-[7%] rounded-full"
             onClick={onStart}
           >
             <img
@@ -2453,10 +2453,7 @@ const FromBlock = ({ openPopup }) => {
   return (
     <div className="absolute w-full h-full ">
       <div className="relative w-full h-full sm:hidden block">
-        <div className="absolute top-[34%] left-[15%] w-[36%] h-[3.4%]">
-          <span className="absolute top-1/2 left-3 transform -translate-y-1/2 text-black">
-            {formData.name}
-          </span>
+        <div className="absolute top-[33.9%] left-[15.5%] w-[35%] h-[3%]">
           <input
             type="text"
             name="name"
@@ -2464,14 +2461,19 @@ const FromBlock = ({ openPopup }) => {
             value={formData.name}
             onChange={handleChange}
             maxLength={10}
-            className="absolute inset-0 opacity-0 cursor-text"
+            className="ml-3 absolute inset-0 opacity-100 cursor-text border-none focus:outline-none"
+            style={{ background: "transparent" }}
           />
         </div>
         {/* Gender selection */}
-        <div className="absolute top-[34%] right-[15.7%] w-[22%] h-[3%] flex">
+        <div className="absolute top-[33.9%] right-[17.7%] w-[20%] h-[3%] flex">
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-1 transform -translate-y-1/2 text-black">
-              {formData.gender === "男" ? "✓" : ""}
+            <span className="absolute top-1/2 left-0 transform -translate-y-1/2 text-black">
+              {formData.gender === "男" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2483,8 +2485,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-1 transform -translate-y-1/2 text-black">
-              {formData.gender === "女" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[3%] transform -translate-y-1/2 text-black">
+              {formData.gender === "女" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2498,10 +2504,14 @@ const FromBlock = ({ openPopup }) => {
         </div>
 
         {/* Age groups */}
-        <div className="absolute top-[38.4%] left-[15.5%] w-[65%] h-[3%] flex">
+        <div className="absolute top-[38.3%] left-[15.5%] w-[65%] h-[3%] flex">
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-[2px] transform -translate-y-1/2 text-black">
-              {formData.age === "25以下" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[1%] transform -translate-y-1/2 text-black">
+              {formData.age === "25以下" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2513,8 +2523,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-2 transform -translate-y-1/2 text-black">
-              {formData.age === "26-30" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[4%] transform -translate-y-1/2 text-black">
+              {formData.age === "26-30" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2526,8 +2540,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-[6px] transform -translate-y-1/2 text-black">
-              {formData.age === "31-35" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[1%] transform -translate-y-1/2 text-black">
+              {formData.age === "31-35" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2539,8 +2557,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-1 transform -translate-y-1/2 text-black">
-              {formData.age === "36-40" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[5%] transform -translate-y-1/2 text-black">
+              {formData.age === "36-40" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2555,8 +2577,12 @@ const FromBlock = ({ openPopup }) => {
 
         <div className="absolute top-[42.8%] left-[15.5%] w-[65%] h-[3%] flex">
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-[2px] transform -translate-y-1/2 text-black">
-              {formData.age === "41-45" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[1%] transform -translate-y-1/2 text-black">
+              {formData.age === "41-45" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2568,8 +2594,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-[8px] transform -translate-y-1/2 text-black">
-              {formData.age === "46-50" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[5%] transform -translate-y-1/2 text-black">
+              {formData.age === "46-50" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2581,8 +2611,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2  left-[6px] transform -translate-y-1/2 text-black">
-              {formData.age === "51+" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[1%] transform -translate-y-1/2 text-black">
+              {formData.age === "51+" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2596,10 +2630,7 @@ const FromBlock = ({ openPopup }) => {
         </div>
 
         {/* Phone number */}
-        <div className="absolute top-[47%] left-[20%] w-[23%] h-[3%]">
-          <span className="absolute top-1/2 left-4 transform -translate-y-1/2 text-black">
-            {formData.phone}
-          </span>
+        <div className="absolute top-[47.2%] left-[20.5%] w-[23%] h-[3%]">
           <input
             type="tel"
             name="phone"
@@ -2607,16 +2638,20 @@ const FromBlock = ({ openPopup }) => {
             value={formData.phone}
             onChange={handleChange}
             maxLength={10}
-            className="absolute inset-0 opacity-0 cursor-text"
-            placeholder="手機號碼"
+            className="ml-3 absolute inset-0 opacity-100 cursor-text border-none focus:outline-none"
+            style={{ background: "transparent" }}
           />
         </div>
 
         {/* Product Type */}
-        <div className="absolute top-[47%] left-[66%] w-[26%] h-[3%] flex">
+        <div className="absolute top-[47.2%] left-[66%] w-[26%] h-[3%] flex">
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-1 transform -translate-y-1/2 text-black">
-              {formData.experience === "油性頭皮屑" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[5%] transform -translate-y-1/2 text-black">
+              {formData.experience === "油性頭皮屑" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2628,8 +2663,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-[8px] transform -translate-y-1/2 text-black">
-              {formData.experience === "乾性頭皮屑" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[8%] transform -translate-y-1/2 text-black">
+              {formData.experience === "乾性頭皮屑" ? (
+                <span className="text-[20px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2643,25 +2682,26 @@ const FromBlock = ({ openPopup }) => {
         </div>
 
         {/* Email */}
-        <div className="absolute top-[57.2%] left-[19%] w-[72%] h-[3%]">
-          <span className="absolute top-1/2 left-3 transform -translate-y-1/2 text-black">
-            {formData.email}
-          </span>
+        <div className="absolute top-[57.5%] left-[18.8%] w-[73%] h-[3%]">
           <input
             type="email"
             name="email"
             id="email"
             value={formData.email}
             onChange={handleChange}
-            className="absolute inset-0 opacity-0 cursor-text"
-            placeholder="E-MAIL"
+            className="ml-3 absolute inset-0 opacity-100 cursor-text border-none focus:outline-none"
+            style={{ background: "transparent" }}
             maxLength={30}
           />
         </div>
-        <div className="absolute top-[61.5%] left-[21.2%] w-[9.5%] h-[3%]">
-          <span className="absolute top-1/2 left-[1%] transform -translate-y-1/2 text-black flex gap-[28%] w-full">
-            <span>{formData.postcode.slice(0, 1)}</span>
-            <span>{formData.postcode.slice(1, 2)}</span>
+        <div className="absolute top-[61.7%] left-[20.2%] w-[11%] h-[3%]">
+        <span className="absolute top-1/2 left-[8%] transform -translate-y-1/2 text-black">
+            {formData.postcode.slice(0, 1)}
+          </span>
+          <span className="absolute top-1/2 left-[43%] transform -translate-y-1/2 text-black">
+            {formData.postcode.slice(1, 2)}
+          </span>
+          <span className="absolute top-1/2 left-[77%] transform -translate-y-1/2 text-black">
             {formData.postcode.slice(2, 3)}
           </span>
           <input
@@ -2671,16 +2711,13 @@ const FromBlock = ({ openPopup }) => {
             value={formData.postcode}
             maxLength={3}
             onChange={handleChange}
-            className="absolute inset-0 opacity-0 cursor-text"
+            className="ml-3 absolute inset-0 opacity-0 cursor-text"
             placeholder="E-MAIL"
           />
         </div>
 
         {/* Address */}
-        <div className="absolute top-[61.5%] left-[32%] w-[59%] h-[3%]">
-          <span className="absolute top-1/2 left-4 transform -translate-y-1/2 text-black">
-            {formData.address}
-          </span>
+        <div className="absolute top-[61.5%] left-[32%] w-[59.5%] h-[3.2%]">
           <input
             type="text"
             name="address"
@@ -2688,14 +2725,14 @@ const FromBlock = ({ openPopup }) => {
             value={formData.address}
             onChange={handleChange}
             maxLength={35}
-            className="absolute inset-0 opacity-0 cursor-text"
-            placeholder="寄送地址"
+            className="ml-3 absolute inset-0 opacity-100 cursor-text border-none focus:outline-none"
+            style={{ background: "transparent" }}
           />
         </div>
 
         {/* Submit button */}
         <div
-          className="absolute bottom-[7%] left-[7%] w-[86%] h-[9.5%] cursor-pointer"
+          className="absolute bottom-[5.5%] left-[7%] w-[86.1%] h-[9.3%] cursor-pointer"
           onClick={handleSubmit}
         >
           <div className="absolute inset-0 opacity-100">
@@ -2705,9 +2742,6 @@ const FromBlock = ({ openPopup }) => {
       </div>
       <div className="relative w-full h-full sm:block hidden text-[12px]">
         <div className="absolute top-[28%] left-[16%] w-[31%] h-[3%]">
-          <span className="absolute top-1/2 left-3 transform -translate-y-1/2 text-black">
-            {formData.name}
-          </span>
           <input
             type="text"
             name="name"
@@ -2715,14 +2749,19 @@ const FromBlock = ({ openPopup }) => {
             value={formData.name}
             onChange={handleChange}
             maxLength={10}
-            className="absolute inset-0 opacity-0 cursor-text"
+            className="ml-3 w-full absolute inset-0 opacity-100 cursor-text border-none focus:outline-none"
+            style={{ background: "transparent" }}
           />
         </div>
         {/* Gender selection */}
-        <div className="absolute top-[28%] right-[9%] w-[29%] h-[3%] flex">
+        <div className="absolute top-[28.2%] right-[10%] w-[29%] h-[3%] flex">
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-1 transform -translate-y-1/2 text-black">
-              {formData.gender === "男" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[5%] transform -translate-y-1/2 text-black">
+              {formData.gender === "男" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2734,8 +2773,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-1 transform -translate-y-1/2 text-black">
-              {formData.gender === "女" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[3%] transform -translate-y-1/2 text-black">
+              {formData.gender === "女" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2749,10 +2792,14 @@ const FromBlock = ({ openPopup }) => {
         </div>
 
         {/* Age groups */}
-        <div className="absolute top-[32%] left-[16%] w-[80%] h-[3%] flex">
+        <div className="absolute top-[32.2%] left-[16%] w-[80%] h-[3%] flex">
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[2px] transform -translate-y-1/2 text-black">
-              {formData.age === "25以下" ? "✓" : ""}
+              {formData.age === "25以下" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2764,8 +2811,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-2 transform -translate-y-1/2 text-black">
-              {formData.age === "26-30" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[9%] transform -translate-y-1/2 text-black">
+              {formData.age === "26-30" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2777,8 +2828,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-[6px] transform -translate-y-1/2 text-black">
-              {formData.age === "31-35" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[4%] transform -translate-y-1/2 text-black">
+              {formData.age === "31-35" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2790,8 +2845,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-1 transform -translate-y-1/2 text-black">
-              {formData.age === "36-40" ? "✓" : ""}
+            <span className="absolute top-1/2 left-0 transform -translate-y-1/2 text-black">
+              {formData.age === "36-40" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2804,10 +2863,14 @@ const FromBlock = ({ openPopup }) => {
           </div>
         </div>
 
-        <div className="absolute top-[36%] left-[16%] w-[80%] h-[3%] flex">
+        <div className="absolute top-[36.1%] left-[16%] w-[80%] h-[3%] flex">
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[2px] transform -translate-y-1/2 text-black">
-              {formData.age === "41-45" ? "✓" : ""}
+              {formData.age === "41-45" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2819,8 +2882,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-[8px] transform -translate-y-1/2 text-black">
-              {formData.age === "46-50" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[9%] transform -translate-y-1/2 text-black">
+              {formData.age === "46-50" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2832,8 +2899,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2  left-[6px] transform -translate-y-1/2 text-black">
-              {formData.age === "51+" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[4%] transform -translate-y-1/2 text-black">
+              {formData.age === "51+" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2847,10 +2918,7 @@ const FromBlock = ({ openPopup }) => {
         </div>
 
         {/* Phone number */}
-        <div className="absolute top-[40%] left-[23%] w-[71%] h-[3%]">
-          <span className="absolute top-1/2 left-4 transform -translate-y-1/2 text-black">
-            {formData.phone}
-          </span>
+        <div className="absolute top-[40%] left-[24%] w-[70%] h-[3%]">
           <input
             type="tel"
             name="phone"
@@ -2858,16 +2926,20 @@ const FromBlock = ({ openPopup }) => {
             value={formData.phone}
             onChange={handleChange}
             maxLength={10}
-            className="absolute inset-0 opacity-0 cursor-text"
-            placeholder="手機號碼"
+            className="ml-3 absolute inset-0 opacity-100 cursor-text border-none focus:outline-none"
+            style={{ background: "transparent" }}
           />
         </div>
 
         {/* Product Type */}
         <div className="absolute top-[44%] left-[31%] w-[33%] h-[3%] flex">
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-1 transform -translate-y-1/2 text-black">
-              {formData.experience === "油性頭皮屑" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[3%] transform -translate-y-1/2 text-black">
+              {formData.experience === "油性頭皮屑" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2879,8 +2951,12 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-[8px] transform -translate-y-1/2 text-black">
-              {formData.experience === "乾性頭皮屑" ? "✓" : ""}
+            <span className="absolute top-1/2 left-[8%] transform -translate-y-1/2 text-black">
+              {formData.experience === "乾性頭皮屑" ? (
+                <span className="text-[16px]">●</span>
+              ) : (
+                ""
+              )}
             </span>
             <input
               type="radio"
@@ -2894,25 +2970,26 @@ const FromBlock = ({ openPopup }) => {
         </div>
 
         {/* Email */}
-        <div className="absolute top-[52.6%] left-[19%] w-[75%] h-[3%]">
-          <span className="absolute top-1/2 left-3 transform -translate-y-1/2 text-black">
-            {formData.email}
-          </span>
+        <div className="absolute top-[52.6%] left-[20%] w-[74%] h-[3%]">
           <input
             type="email"
             name="email"
             id="email"
             value={formData.email}
             onChange={handleChange}
-            className="absolute inset-0 opacity-0 cursor-text"
-            placeholder="E-MAIL"
+            className="ml-3 absolute inset-0 opacity-100 cursor-text border-none focus:outline-none"
+            style={{ background: "transparent" }}
             maxLength={30}
           />
         </div>
         <div className="absolute top-[57%] left-[23.5%] w-[20%] h-[3%]">
-          <span className="absolute top-1/2 left-[6px] transform -translate-y-1/2 text-black">
-            <span className="mr-[17px]">{formData.postcode.slice(0, 1)}</span>
-            <span className="mr-[17px]">{formData.postcode.slice(1, 2)}</span>
+          <span className="absolute top-1/2 left-[10%] transform -translate-y-1/2 text-black">
+            {formData.postcode.slice(0, 1)}
+          </span>
+          <span className="absolute top-1/2 left-[43%] transform -translate-y-1/2 text-black">
+            {formData.postcode.slice(1, 2)}
+          </span>
+          <span className="absolute top-1/2 left-[73%] transform -translate-y-1/2 text-black">
             {formData.postcode.slice(2, 3)}
           </span>
           <input
@@ -2928,10 +3005,7 @@ const FromBlock = ({ openPopup }) => {
         </div>
 
         {/* Address */}
-        <div className="absolute top-[61%] left-[5%] w-[89%] h-[3%]">
-          <span className="absolute top-1/2 left-4 transform -translate-y-1/2 text-black">
-            {formData.address}
-          </span>
+        <div className="absolute top-[60.75%] left-[6%] w-[88%] h-[3.08%]">
           <input
             type="text"
             name="address"
@@ -2939,14 +3013,14 @@ const FromBlock = ({ openPopup }) => {
             value={formData.address}
             onChange={handleChange}
             maxLength={35}
-            className="absolute inset-0 opacity-0 cursor-text"
-            placeholder="寄送地址"
+            className="ml-3 absolute inset-0 opacity-100 cursor-text border-none focus:outline-none"
+            style={{ background: "transparent" }}
           />
         </div>
 
         {/* Submit button */}
         <div
-          className="absolute bottom-[4%] left-[3%] w-[93%] h-[5.5%] cursor-pointer"
+          className="absolute bottom-[4.3%] left-[3%] w-[93%] h-[5.5%] cursor-pointer"
           onClick={handleSubmit}
         >
           <div className="absolute inset-0 opacity-100">
@@ -3105,17 +3179,17 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
       />
       <div className="h-screen sm:h-auto overflow-y-auto sm:overflow-hidden ">
         <div className="flex flex-col items-center justify-start pt-8 pb-16 sm:w-full w-[80%] mx-auto">
-          <div className="relative sm:px-[32px] px-0 w-full sm:max-w-[430px] max-w-[700px] py-8">
+          <div className="relative sm:px-[16px] px-0 w-full sm:max-w-[430px] max-w-[700px] py-8">
             <div className="outcome-container relative rounded-[15px] overflow-hidden">
               <img
-                className="w-full sm:max-w-[350px] max-w-[700px] mx-auto object-contain"
+                className="w-full sm:max-w-[370px] max-w-[700px] mx-auto object-contain"
                 src={resultImage}
                 alt="打工人測驗結果"
               />
             </div>
           </div>
           <div className="relative result-content flex flex-col justify-content items-center sm:max-w-[430px] max-w-[700px] w-full">
-            <div className="relative  flex flex-col justify-center items-center align-center w-full sm:max-w-[350px] rounded-3xl mb-4 max-w-[700px]">
+            <div className="relative  flex flex-col justify-center items-center align-center w-full sm:max-w-[370px] rounded-3xl mb-4 max-w-[700px]">
               <img
                 src={config?.formBlock}
                 alt="form-block"
@@ -3129,7 +3203,7 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
               <FromBlock config={config} openPopup={handleOpenPopup} />
             </div>
             <div className="sm:block hidden">
-              <div className="text-center">
+              <div className="text-center max-w-[370px]">
                 <button onClick={handleDownload}>
                   <img
                     className="share-button"
@@ -3138,15 +3212,15 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
                   />
                 </button>
               </div>
-              <div className="flex mb-4">
-                <button onClick={handleRestartClick} className="w-[140px]">
+              <div className="flex mb-4 justify-between max-w-[370px]">
+                <button onClick={handleRestartClick} className="w-[38%]">
                   <img
                     className="restart-button"
                     src={config?.buttons?.restartButton}
                     alt="restart-button-image"
                   />
                 </button>
-                <button onClick={handleShare}>
+                <button onClick={handleShare} className="w-[63%]">
                   <img
                     className="share-button"
                     src={config.buttons.shareButton}
@@ -3166,14 +3240,14 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
                 </button>
               </div>
               <div className="flex">
-                <button onClick={handleRestartClick} className="w-[40%]">
+                <button onClick={handleRestartClick} className="w-[41%]">
                   <img
                     className="restart-button"
                     src={config.desktop.buttons.restartButton}
                     alt="restart-button-image"
                   />
                 </button>
-                <button onClick={handleShare} className="w-[60%]">
+                <button onClick={handleShare} className="w-[59%]">
                   <img
                     className="share-button"
                     src={config.desktop.buttons.shareButton}
@@ -3182,10 +3256,7 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
                 </button>
               </div>
             </div>
-            <div
-              className="relative  flex flex-col justify-center items-center align-center w-full max-w-[700px]
-                      rounded-3xl mb-4 sm:hidden"
-            >
+            <div className="relative flex flex-col justify-center items-center align-center w-full max-w-[700px] mb-4 sm:hidden">
               <img
                 src={config.desktop.wash_share}
                 alt="wash-and-share-exp"
@@ -3220,65 +3291,39 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
               </div>
             </div>
 
-            <div
-              className="relative  flex-col justify-center items-center align-center w-full sm:max-w-[350px] sm:flex hidden
-                      rounded-3xl mb-4 font-semibold text-sm"
-            >
+            <div className="relative hidden flex-col justify-center items-center align-center w-full max-w-[370px] mb-4 sm:flex">
               <img
                 src={config.wash_share}
                 alt="wash-and-share-exp"
                 className="sm:block hidden"
               />
-
-              <a
-                id="clickToParticipate"
-                className="absolute bottom-[24%] w-[90%] hidden sm:block"
-                target="_blank"
-                href={config.links.PARTICIPATE}
-              >
-                <img
-                  src={config.clickToParticipateBtn}
-                  alt="click-to-participate"
-                  className="w-full h-auto"
+              <div className="absolute top-[30.1%] left-[4%] w-[91.5%] h-[2.3%] rounded-full">
+                <button
+                  id="clickToParticipatemobile"
+                  className="w-full h-full"
+                  onClick={() => {
+                    window.open(config.links.PARTICIPATE, "_blank");
+                  }}
                 />
-              </a>
-            </div>
-
-            <div
-              className="relative flex-col justify-center items-center align-center w-full max-w-[350px]
-                      rounded-3xl mb-4 font-semibold text-sm  hidden sm:flex"
-            >
-              <img src={config?.propaganda_01} alt="propaganda-light" />
-              <button
-                id="clickToProduct1"
-                className="absolute -bottom-[4%] w-[60%] left-[20%]"
-              >
-                <a target="_blank" href={config.links.PRODUCT}>
-                  <img
-                    src={config?.buttons?.detailsButton}
-                    alt="see-more-details"
-                  />
-                </a>
-              </button>
-            </div>
-
-            <div
-              className="relative  flex-col justify-center items-center align-center w-full max-w-[350px]
-                      rounded-3xl mb-10 pt-3 pb-4 font-semibold text-sm  hidden sm:flex"
-            >
-              <img src={config?.propaganda_02} alt="propaganda-water" />
-              <button
-                id="clickToProduct2"
-                className="absolute bottom-0 w-[60%] left-[20%]"
-                onClick={handleRestartClick}
-              >
-                <a target="_blank" href={config.links.PRODUCT}>
-                  <img
-                    src={config?.buttons?.detailsButton}
-                    alt="see-more-details"
-                  />
-                </a>
-              </button>
+              </div>
+              <div className="absolute top-[68.8%] left-[24.5%] w-[50%] h-[2.2%] rounded-full">
+                <button
+                  id="clickToProduct1mobile"
+                  className="w-full h-full"
+                  onClick={() => {
+                    window.open(config.links.PRODUCT, "_blank");
+                  }}
+                />
+              </div>
+              <div className="absolute top-[97.7%] left-[24.5%] w-[50%] h-[2.2%] rounded-full">
+                <button
+                  id="clickToProduct2mobile"
+                  className="w-full h-full"
+                  onClick={() => {
+                    window.open(config.links.PRODUCT, "_blank");
+                  }}
+                />
+              </div>
             </div>
             {isPopupOpen && (
               <Popup config={config} onClose={handleClosePopup} />

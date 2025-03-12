@@ -113,6 +113,14 @@
         });
 
         function removePopups() {
+          const tdCustomElements = document.querySelectorAll(
+            '[class^="td_custom"]'
+          );
+
+          tdCustomElements.forEach(function (element) {
+            element.remove();
+          });
+
           const popups = document.querySelectorAll(
             ".td_custom_20250116_popup_init, .td_custom_20250116_popup_app"
           );
