@@ -393,17 +393,15 @@ const GameSection = ({ config, onCardClick = false }) => {
           <img
             src={config.mobile.gameSection.title}
             alt="title"
-            className="w-[80%] h-auto"
+            className="w-[90%] h-auto"
           />
-          <div className="relative">
-            <button onClick={onCardClick}>
-              <img
-                src={config.mobile.gameSection.card}
-                alt="card"
-                className="relative w-[80%] h-auto mx-auto"
-              />
-            </button>
-          </div>
+          <button onClick={onCardClick}>
+            <img
+              src={config.mobile.gameSection.card}
+              alt="card"
+              className="relative w-[90%] h-auto mx-auto"
+            />
+          </button>
         </div>
       </div>
     </div>
