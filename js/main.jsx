@@ -1569,7 +1569,11 @@ const Footer = ({ config }) => {
                 className="w-[50px]"
               />
             </a>
-            <a onClick={() => window.open(config.links.line, '_blank', 'noopener,noreferrer')}>
+            <a
+              onClick={() =>
+                window.open(config.links.line, "_blank", "noopener,noreferrer")
+              }
+            >
               <img
                 src={config.desktop.footer.line}
                 alt="icon"
@@ -3021,21 +3025,11 @@ const Popup = ({ config, onClose }) => {
 const ResultPage = memo(({ resultImage, config, onRestart }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const handleShare = async () => {
-    try {
-      if (navigator.share) {
-        try {
-          await navigator.share({
-            title: "「打工人」壓力測試！你的職場菜色是?",
-            text: `測看看你的「職場壓力鍋菜色」是哪一道：https://event.ttshow.tw/scalp_dandruff#game`,
-          });
-        } catch (shareError) {
-          console.error("Text share failed:", shareError);
-        }
-      }
-    } catch (error) {
-      console.error("Share Failed:", error);
-    }
+  const handleShare = () => {
+    navigator.clipboard.writeText(
+      "https://event.ttshow.tw/scalp_dandruff#game"
+    );
+    alert("連結已複製");
   };
 
   const handleDownload = () => {
