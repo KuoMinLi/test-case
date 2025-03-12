@@ -2470,7 +2470,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-0 transform -translate-y-1/2 text-black">
               {formData.gender === "男" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2487,7 +2489,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-[3%] transform -translate-y-1/2 text-black">
               {formData.gender === "女" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2508,7 +2512,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[1%] transform -translate-y-1/2 text-black">
               {formData.age === "25以下" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2525,7 +2531,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[4%] transform -translate-y-1/2 text-black">
               {formData.age === "26-30" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2542,7 +2550,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[1%] transform -translate-y-1/2 text-black">
               {formData.age === "31-35" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2559,7 +2569,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[5%] transform -translate-y-1/2 text-black">
               {formData.age === "36-40" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2579,7 +2591,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[1%] transform -translate-y-1/2 text-black">
               {formData.age === "41-45" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2596,7 +2610,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[5%] transform -translate-y-1/2 text-black">
               {formData.age === "46-50" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2613,7 +2629,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[1%] transform -translate-y-1/2 text-black">
               {formData.age === "51+" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2648,7 +2666,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-[5%] transform -translate-y-1/2 text-black">
               {formData.experience === "油性頭皮屑" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2665,7 +2685,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-[8%] transform -translate-y-1/2 text-black">
               {formData.experience === "乾性頭皮屑" ? (
-                <span className="text-[20px]">●</span>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2695,7 +2717,7 @@ const FromBlock = ({ openPopup }) => {
           />
         </div>
         <div className="absolute top-[61.7%] left-[20.2%] w-[11%] h-[3%]">
-        <span className="absolute top-1/2 left-[8%] transform -translate-y-1/2 text-black">
+          <span className="absolute top-1/2 left-[8%] transform -translate-y-1/2 text-black">
             {formData.postcode.slice(0, 1)}
           </span>
           <span className="absolute top-1/2 left-[43%] transform -translate-y-1/2 text-black">
@@ -2758,7 +2780,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-[5%] transform -translate-y-1/2 text-black">
               {formData.gender === "男" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2775,7 +2799,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-[3%] transform -translate-y-1/2 text-black">
               {formData.gender === "女" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2796,7 +2822,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[2px] transform -translate-y-1/2 text-black">
               {formData.age === "25以下" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2813,7 +2841,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[9%] transform -translate-y-1/2 text-black">
               {formData.age === "26-30" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2830,7 +2860,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[4%] transform -translate-y-1/2 text-black">
               {formData.age === "31-35" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2847,7 +2879,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-0 transform -translate-y-1/2 text-black">
               {formData.age === "36-40" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2867,7 +2901,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[2px] transform -translate-y-1/2 text-black">
               {formData.age === "41-45" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2884,7 +2920,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[9%] transform -translate-y-1/2 text-black">
               {formData.age === "46-50" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2901,7 +2939,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/4 relative">
             <span className="absolute top-1/2 left-[4%] transform -translate-y-1/2 text-black">
               {formData.age === "51+" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2936,7 +2976,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-[3%] transform -translate-y-1/2 text-black">
               {formData.experience === "油性頭皮屑" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
@@ -2953,7 +2995,9 @@ const FromBlock = ({ openPopup }) => {
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-[8%] transform -translate-y-1/2 text-black">
               {formData.experience === "乾性頭皮屑" ? (
-                <span className="text-[16px]">●</span>
+                <svg width="16" height="16" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="black" />
+                </svg>
               ) : (
                 ""
               )}
