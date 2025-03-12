@@ -1569,7 +1569,7 @@ const Footer = ({ config }) => {
                 className="w-[50px]"
               />
             </a>
-            <a onClick={() => window.open(config.links.line)}>
+            <a onClick={() => window.open(config.links.line, '_blank', 'noopener,noreferrer')}>
               <img
                 src={config.desktop.footer.line}
                 alt="icon"
