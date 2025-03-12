@@ -1679,7 +1679,6 @@ const Footer = ({ config }) => {
 
 const PsychologicalGame = ({ onClose }) => {
   const [staticJson, setStaticJson] = useState(STORAGE_DATA_Local);
-  console.log(staticJson);
   const QUESTIONS = staticJson?.config?.questions || [];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
@@ -1980,10 +1979,6 @@ const PsychologicalGame = ({ onClose }) => {
     );
   }
 
-  console.log("最終類別得分:", categoryScores);
-  console.log("最高分類別:", highestCategory);
-  console.log("決勝類別:", tiebreaker);
-
   // 測驗完成，顯示結果頁
   return (
     <div className="flex flex-col w-full">
@@ -2044,8 +2039,6 @@ const DesktopFrame = memo(({ config, currentQuestionIndex, imgType }) => {
 });
 
 const CardFrame = memo(({ config, currentQuestionIndex, imgType }) => {
-  console.log(imgType);
-
   const backgroundImages = {
     start: config.cardStart,
     question_1: config.cardQuestion_1,
