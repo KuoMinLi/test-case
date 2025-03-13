@@ -101,7 +101,7 @@ const Header = ({ config }) => {
           </a>
           <div className="flex items-center justify-end gap-5">
             <div className="flex items-center">
-              <a href="game">
+              <a href="#game">
                 <div className="toggle-pair">
                   <img
                     src={config.desktop.header.gameWhite}
@@ -115,49 +115,93 @@ const Header = ({ config }) => {
                   />
                 </div>
               </a>
-              <a href="#free">
-                <img
-                  src={config.desktop.header.free}
-                  alt="free"
-                  className="w-[120px] h-auto"
-                />
+              <a href="#free" className="-mx-[34px]">
+                <div className="w-[190px] h-auto relative group">
+                  <img
+                    src={config.desktop.header.free}
+                    alt="free"
+                    className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={config.desktop.header.freeHover}
+                    alt="free-hover"
+                    className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
               </a>
-              <a href="#prize">
-                <img
-                  src={config.desktop.header.prize}
-                  alt="prize"
-                  className="w-[112px] h-auto"
-                />
+              <a href="#prize" className="-mx-[34px]">
+                <div className="w-[180px] h-auto relative group">
+                  <img
+                    src={config.desktop.header.prize}
+                    alt="prize"
+                    className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={config.desktop.header.prizeHover}
+                    alt="prize-hover"
+                    className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
               </a>
             </div>
-            <a href="#video">
-              <img
-                src={config.desktop.header.video}
-                alt="video"
-                className="w-[60px] h-auto pt-[10px]"
-              />
-            </a>
-            <a href="#recommend">
-              <img
-                src={config.desktop.header.recommend}
-                alt="recommend}"
-                className="w-[60px] h-auto pt-[10px]"
-              />
-            </a>
-            <a href="#level">
-              <img
-                src={config.desktop.header.level}
-                alt="level}"
-                className="w-[70px] h-auto pt-[10px]"
-              />
-            </a>
-            <a href="#real">
-              <img
-                src={config.desktop.header.real}
-                alt="real"
-                className="w-[60px] h-auto pt-[10px]"
-              />
-            </a>
+            <div className="flex items-center gap-5 pt-[10px]">
+              <a href="#video">
+                <div className="w-[60px] h-auto relative group">
+                  <img
+                    src={config.desktop.header.video}
+                    alt="video"
+                    className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={config.desktop.header.videoHover}
+                    alt="video-hover"
+                    className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
+              </a>
+              <a href="#recommend">
+                <div className="w-[60px] h-auto relative group">
+                  <img
+                    src={config.desktop.header.recommend}
+                    alt="recommend"
+                    className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={config.desktop.header.recommendHover}
+                    alt="recommend-hover"
+                    className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
+              </a>
+              <a href="#level">
+                <div className="w-[70px] h-auto relative group">
+                  <img
+                    src={config.desktop.header.level}
+                    alt="level"
+                    className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={config.desktop.header.levelHover}
+                    alt="level-hover"
+                    className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
+              </a>
+              <a href="#real">
+                <div className="w-[60px] h-auto relative group">
+                  <img
+                    src={config.desktop.header.real}
+                    alt="real"
+                    className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={config.desktop.header.realHover}
+                    alt="real-hover"
+                    className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
+              </a>
+            </div>
             <div className="flex items-center -space-x-3">
               <a onClick={() => window.open(config.links.official)}>
                 <img
@@ -443,11 +487,20 @@ const PrizeSection = ({ config }) => {
               className="w-[65%] h-auto mx-auto"
             />
             <button onClick={() => window.open(config.links.PARTICIPATE)}>
-              <img
-                src={config.desktop.prizeSection.cta}
-                alt="cta"
-                className="absolute bottom-[29%] right-[26%] w-[28%] h-auto"
-              />
+              <div className="absolute bottom-[29%] right-[26%] w-[28%] h-auto">
+                <div className="relative group">
+                  <img
+                    src={config.desktop.prizeSection.cta}
+                    alt="cta"
+                    className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={config.desktop.prizeSection.ctaHover}
+                    alt="cta-hover"
+                    className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
+              </div>
             </button>
           </div>
         </div>
@@ -965,18 +1018,29 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                     <button
                       type="button"
                       onClick={() => window.open(config.links.ctaProduct)}
+                      className="relative group w-[240px]"
                     >
                       <img
                         src={config.desktop.freeSection.ctaProduct}
                         alt="ctaProduct"
-                        className="w-[240px]"
+                        className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                      />
+                      <img
+                        src={config.desktop.freeSection.ctaProductHover}
+                        alt="ctaProduct-hover"
+                        className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
                       />
                     </button>
-                    <button type="submit">
+                    <button type="submit" className="relative group w-[280px]">
                       <img
                         src={config.desktop.freeSection.ctaFree}
                         alt="ctaFree"
-                        className="w-[280px]"
+                        className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                      />
+                      <img
+                        src={config.desktop.freeSection.ctaFreeHover}
+                        alt="ctaFree-hover"
+                        className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
                       />
                     </button>
                   </div>
@@ -2089,16 +2153,27 @@ const StartPage = memo(({ config, onStart, currentQuestionIndex }) => {
           className="absolute inset-0 object-cover w-full h-full"
         />
         <div className="relative w-full transition-all duration-300 flex flex-col items-center justify-center">
-          <div className="mx-auto max-w-[800px]">
+          <div className="mx-auto max-w-[900px]">
             <DesktopFrame
               imgType="start"
               config={config}
               currentQuestionIndex={currentQuestionIndex}
             />
+            <div className="mt-6 w-[30%] mx-auto">
+              <button className="w-full relative group" onClick={onStart}>
+                <img
+                  src={config.desktop.buttons.startButton}
+                  alt="start-button"
+                  className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                />
+                <img
+                  src={config.desktop.buttons.startButtonHover}
+                  alt="start-button-hover"
+                  className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                />
+              </button>
+            </div>
           </div>
-          <button className="mt-6 w-[35%] mx-auto" onClick={onStart}>
-            <img className="start-button-float" src={config.desktop.buttons.startButton} alt="start-button-image" />
-          </button>
         </div>
       </div>
       <div className="w-full min-h-[100dvh] items-center justify-center max-w-[430px] sm:flex hidden">
@@ -2232,7 +2307,7 @@ const QuestionPage = memo(
 
     return (
       <div>
-        <div className="flex w-full min-h-[100dvh] md:pt-[calc(-57.5vw+445px)] pt-[100px] justify-center sm:hidden">
+        <div className="flex w-full min-h-[100dvh] md:pt-[calc(-57.5vw+460px)] pt-[115px] justify-center sm:hidden">
           <img
             src={config.desktop.background}
             alt="background"
@@ -2288,7 +2363,32 @@ const QuestionPage = memo(
             className="absolute inset-0 object-cover w-full h-full"
           />
           <div className="relative w-full transition-all duration-300">
-            <CardFrame imgType={"question_" + questionId} config={config} />
+            <div className="mt-6">
+              <CardFrame imgType={"question_" + questionId} config={config} />
+            </div>
+            <div className="absolute flex flex-col items-center w-full gap-3 bottom-[13%]">
+              {buttons?.map((button, index) => (
+                <button
+                  key={index}
+                  onClick={() =>
+                    handleButtonClick(button?.score, button?.letter)
+                  }
+                  onTouchEnd={(e) => e.target.blur()}
+                  className="w-[90%] mx-auto rounded-full h-full bg-white border-4 border-[#534B49] py-1"
+                >
+                  <span
+                    className="font-[900] whitespace-pre-line"
+                    style={{ fontFamily: "sans-serif" }}
+                  >
+                    {
+                      options.filter(
+                        (option) => option.letter === button.letter
+                      )[0]?.text
+                    }
+                  </span>
+                </button>
+              ))}
+            </div>
             <button
               onClick={handleBackClick}
               className="absolute left-1/2 w-[110px]
@@ -2304,39 +2404,6 @@ const QuestionPage = memo(
               />
             </button>
             {/* 根據題目選項不同客製化：第5題第一個選項兩行，第6題第二個選項兩行，第8題第三個選項兩行 */}
-            <div
-              className={`absolute left-[6%] w-[88%] ${
-                [5, 6, 8].includes(currentQuestion?.id)
-                  ? "top-[60.5%] h-[22%]"
-                  : "top-[62.5%] h-[20%]"
-              }`}
-            >
-              <div
-                className="flex flex-col items-center mt-6 h-full w-full"
-                style={{
-                  gap: [5, 6, 8].includes(currentQuestion?.id)
-                    ? "0.8rem"
-                    : "0.75rem",
-                }}
-              >
-                {buttons?.map((button, index) => (
-                  <button
-                    key={index}
-                    onClick={() =>
-                      handleButtonClick(button?.score, button?.letter)
-                    }
-                    onTouchEnd={(e) => e.target.blur()}
-                    className={`w-full rounded-full ${
-                      (currentQuestion?.id === 5 && index === 0) ||
-                      (currentQuestion?.id === 6 && index === 1) ||
-                      (currentQuestion?.id === 8 && index === 2)
-                        ? "h-[160%]"
-                        : "h-full"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -2344,7 +2411,7 @@ const QuestionPage = memo(
   }
 );
 
-const FromBlock = ({ openPopup }) => {
+const FromBlock = ({ openPopup, config }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -2467,7 +2534,7 @@ const FromBlock = ({ openPopup }) => {
   return (
     <div className="absolute w-full h-full ">
       <div className="relative w-full h-full sm:hidden block">
-        <div className="absolute top-[33.9%] left-[15.5%] w-[35%] h-[3%]">
+        <div className="absolute top-[34.1%] left-[15.5%] w-[35%] h-[3%]">
           <input
             type="text"
             name="name"
@@ -2480,7 +2547,7 @@ const FromBlock = ({ openPopup }) => {
           />
         </div>
         {/* Gender selection */}
-        <div className="absolute top-[33.9%] right-[17.7%] w-[20%] h-[3%] flex">
+        <div className="absolute top-[34.1%] right-[17.7%] w-[20%] h-[3%] flex">
           <div className="w-1/2 relative">
             <span className="absolute top-1/2 left-0 transform -translate-y-1/2 text-black">
               {formData.gender === "男" ? (
@@ -2501,7 +2568,7 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-[3%] transform -translate-y-1/2 text-black">
+            <span className="absolute top-1/2 left-[1%] transform -translate-y-1/2 text-black">
               {formData.gender === "女" ? (
                 <svg width="20" height="20" viewBox="0 0 20 20">
                   <circle cx="10" cy="10" r="8" fill="black" />
@@ -2772,7 +2839,18 @@ const FromBlock = ({ openPopup }) => {
           onClick={handleSubmit}
         >
           <div className="absolute inset-0 opacity-100">
-            <button type="submit" className="w-full h-full" />
+            <button type="submit" className="w-full group">
+              <img
+                src={config.desktop.buttons.applyButton}
+                alt="submit-button"
+                className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+              />
+              <img
+                src={config.desktop.buttons.applyButtonHover}
+                alt="submit-button-hover"
+                className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+              />
+            </button>
           </div>
         </div>
       </div>
@@ -3135,8 +3213,15 @@ const Popup = ({ config, onClose }) => {
             onClick={() => {
               window.open(config.links.PRODUCT, "_blank");
             }}
-            className="absolute bottom-0 left-[50%] transform -translate-x-1/2 w-[57%] h-[19%] rounded-full"
-          />
+            className="absolute bottom-[2%] left-[50.5%] transform -translate-x-1/2 w-[57%] h-[19%] rounded-full group"
+          >
+            <div className="w-full h-full transition-opacity duration-300 ease-in-out group-hover:opacity-0" />
+            <img
+              src={config.desktop.buttons.buyButtonHover}
+              alt="buy-button-hover"
+              className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+            />
+          </button>
           <button
             onClick={onClose}
             className="absolute top-[4%] right-[5%] p-4"
@@ -3323,29 +3408,62 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
               <div className="absolute top-[40.3%] left-[15%] w-[69.5%] h-[3.7%] rounded-full">
                 <button
                   id="clickToParticipatedesktop"
-                  className="w-full h-full"
+                  className="w-full group"
                   onClick={() => {
                     window.open(config.links.PARTICIPATE, "_blank");
                   }}
-                />
+                >
+                  <img
+                    src={config.desktop.buttons.joinButton}
+                    alt="join-button"
+                    className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={config.desktop.buttons.joinButtonHover}
+                    alt="join-button-hover"
+                    className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </button>
               </div>
-              <div className="absolute top-[73.3%] left-[30%] w-[40%] h-[3.9%] rounded-full">
+              <div className="absolute top-[72.9%] left-[30%] w-[40%] h-[3.9%] rounded-full">
                 <button
                   id="clickToProduct1desktop"
-                  className="w-full h-full"
+                  className="w-full group"
                   onClick={() => {
                     window.open(config.links.PRODUCT, "_blank");
                   }}
-                />
+                >
+                  <img
+                    src={config.desktop.buttons.detailButton}
+                    alt="detail-button"
+                    className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={config.desktop.buttons.detailButtonHover}
+                    alt="detail-button-hover"
+                    className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </button>
               </div>
-              <div className="absolute top-[96.3%] left-[30%] w-[40%] h-[3.9%] rounded-full">
+              <div className="absolute top-[95.5%] left-[30%] w-[40%] h-[3.9%] rounded-full">
                 <button
                   id="clickToProduct2desktop"
-                  className="w-full h-full"
+                  className="w-full group"
                   onClick={() => {
                     window.open(config.links.PRODUCT, "_blank");
                   }}
-                />
+                >
+                  <img
+                    src={config.desktop.buttons.detailButton}
+                    alt="detail-button"
+                    className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <img
+                    src={config.desktop.buttons.detailButtonHover}
+                    alt="detail-button-hover"
+                    className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </button>
               </div>
             </div>
 
