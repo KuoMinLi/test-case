@@ -8,7 +8,7 @@ import React, {
 } from "https://esm.sh/react@18.2.0";
 import ReactDOM from "https://esm.sh/react-dom@18.2.0";
 import STORAGE_DATA from "./js/constant.js";
-import STORAGE_DATA_Local from "./js/constantLocal.js";
+import STORAGE_DATA_GAME from "./js/constantGame.js";
 
 const headerHightDesktop = 83.81;
 const headerHight = 57.22;
@@ -1678,7 +1678,7 @@ const Footer = ({ config }) => {
 };
 
 const PsychologicalGame = ({ onClose }) => {
-  const [staticJson, setStaticJson] = useState(STORAGE_DATA_Local);
+  const [staticJson, setStaticJson] = useState(STORAGE_DATA_GAME);
   const QUESTIONS = staticJson?.config?.questions || [];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
@@ -2797,7 +2797,7 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-[3%] transform -translate-y-1/2 text-black">
+            <span className="absolute top-1/2 left-[6%] transform -translate-y-1/2 text-black">
               {formData.gender === "女" ? (
                 <svg width="16" height="16" viewBox="0 0 20 20">
                   <circle cx="10" cy="10" r="8" fill="black" />
@@ -2820,7 +2820,7 @@ const FromBlock = ({ openPopup }) => {
         {/* Age groups */}
         <div className="absolute top-[32.2%] left-[16%] w-[80%] h-[3%] flex">
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-[2px] transform -translate-y-1/2 text-black">
+            <span className="absolute top-1/2 left-[2%] transform -translate-y-1/2 text-black">
               {formData.age === "25以下" ? (
                 <svg width="16" height="16" viewBox="0 0 20 20">
                   <circle cx="10" cy="10" r="8" fill="black" />
@@ -2877,7 +2877,7 @@ const FromBlock = ({ openPopup }) => {
             />
           </div>
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-0 transform -translate-y-1/2 text-black">
+            <span className="absolute top-1/2 left-[3%] transform -translate-y-1/2 text-black">
               {formData.age === "36-40" ? (
                 <svg width="16" height="16" viewBox="0 0 20 20">
                   <circle cx="10" cy="10" r="8" fill="black" />
@@ -2899,7 +2899,7 @@ const FromBlock = ({ openPopup }) => {
 
         <div className="absolute top-[36.1%] left-[16%] w-[80%] h-[3%] flex">
           <div className="w-1/4 relative">
-            <span className="absolute top-1/2 left-[2px] transform -translate-y-1/2 text-black">
+            <span className="absolute top-1/2 left-[2%] transform -translate-y-1/2 text-black">
               {formData.age === "41-45" ? (
                 <svg width="16" height="16" viewBox="0 0 20 20">
                   <circle cx="10" cy="10" r="8" fill="black" />
@@ -2974,7 +2974,7 @@ const FromBlock = ({ openPopup }) => {
         {/* Product Type */}
         <div className="absolute top-[44%] left-[31%] w-[33%] h-[3%] flex">
           <div className="w-1/2 relative">
-            <span className="absolute top-1/2 left-[3%] transform -translate-y-1/2 text-black">
+            <span className="absolute top-1/2 left-[4%] transform -translate-y-1/2 text-black">
               {formData.experience === "油性頭皮屑" ? (
                 <svg width="16" height="16" viewBox="0 0 20 20">
                   <circle cx="10" cy="10" r="8" fill="black" />
@@ -3049,7 +3049,7 @@ const FromBlock = ({ openPopup }) => {
         </div>
 
         {/* Address */}
-        <div className="absolute top-[60.75%] left-[6%] w-[88%] h-[3.08%]">
+        <div className="absolute top-[60.95%] left-[6%] w-[88%] h-[3.08%]">
           <input
             type="text"
             name="address"
@@ -3064,7 +3064,7 @@ const FromBlock = ({ openPopup }) => {
 
         {/* Submit button */}
         <div
-          className="absolute bottom-[4.3%] left-[3%] w-[93%] h-[5.5%] cursor-pointer"
+          className="absolute bottom-[3.9%] left-[3%] w-[93%] h-[5.5%] cursor-pointer"
           onClick={handleSubmit}
         >
           <div className="absolute inset-0 opacity-100">
