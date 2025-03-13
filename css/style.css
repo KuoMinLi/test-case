@@ -129,6 +129,15 @@ body {
   transition: transform 0.3s ease;
 }
 
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 10px solid black;
+  transition: transform 0.3s ease;
+}
+
 a {
 cursor: pointer;
 }

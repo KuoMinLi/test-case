@@ -318,6 +318,14 @@ img[role="button"] {
     }
 }
 
+.button-float {
+    transition: transform 0.3s ease-in-out;
+}
+
+.button-float:hover {
+    transform: translateY(-5px);
+}
+
 .h-screen.overflow-y-auto {
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.3) transparent;

@@ -80,10 +80,12 @@ const Header = ({ config }) => {
     });
   };
 
-  // 設置定時器每隔 500 毫秒切換一次
+  // 設置定時器每隔 500 毫秒切換一次，5秒後清除定時器
   useEffect(() => {
-    const interval = setInterval(toggleItems, 500);
-    return () => clearInterval(interval);
+    const timer = setInterval(toggleItems, 500);
+    setTimeout(() => {
+      clearInterval(timer);
+    }, 5000);
   }, []);
 
   return (
@@ -99,7 +101,7 @@ const Header = ({ config }) => {
           </a>
           <div className="flex items-center justify-end gap-5">
             <div className="flex items-center">
-              <a href="#gameSection">
+              <a href="game">
                 <div className="toggle-pair">
                   <img
                     src={config.desktop.header.gameWhite}
@@ -217,7 +219,7 @@ const Header = ({ config }) => {
             <div className="relative w-full item white-item">
               <a
                 className="flex items-center justify-between"
-                href="#gameSection"
+                href="#game"
                 onClick={toggleMenu}
               >
                 <img
@@ -235,7 +237,7 @@ const Header = ({ config }) => {
             <div className="relative w-full item green-item hidden">
               <a
                 className="flex items-center justify-between"
-                href="#gameSection"
+                href="#game"
                 onClick={toggleMenu}
               >
                 <img
@@ -675,8 +677,8 @@ const ProductTypeSelector = ({
   value,
 }) => {
   const productOptions = [
-    { value: "乾性頭皮屑", label: "乾性頭皮屑" },
     { value: "油性頭皮屑", label: "油性頭皮屑" },
+    { value: "乾性頭皮屑", label: "乾性頭皮屑" },
   ];
 
   return (
@@ -962,7 +964,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                   <div className="flex justify-center gap-4 relative">
                     <button
                       type="button"
-                      onClick={() => window.open(config.links.PRODUCT)}
+                      onClick={() => window.open(config.links.ctaProduct)}
                     >
                       <img
                         src={config.desktop.freeSection.ctaProduct}
@@ -1145,7 +1147,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                 </button>
                 <button
                   type="button"
-                  onClick={() => window.open(config.links.PRODUCT)}
+                  onClick={() => window.open(config.links.ctaProduct)}
                 >
                   <img
                     src={config.mobile.freeSection.ctaProduct}
@@ -1854,6 +1856,11 @@ const PsychologicalGame = ({ onClose }) => {
     const question = QUESTIONS[currentQuestionIndex];
     return {
       ...question,
+      text: question.text,
+      options: question.options.map((option, index) => ({
+        letter: option.letter,
+        text: option.text,
+      })),
     };
   }, [currentQuestionIndex, QUESTIONS]);
 
@@ -2017,11 +2024,12 @@ const DesktopFrame = memo(({ config, currentQuestionIndex, imgType }) => {
     question_8: config.desktop.cardQuestion_8,
     question_9: config.desktop.cardQuestion_9,
     question_10: config.desktop.cardQuestion_10,
+    question: config.desktop.cardQuestion,
     loading: config.desktop.cardLoading,
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full">
       {/* Using the same background image for all page types */}
       {Object.entries(backgroundImages).map(([type, src]) => (
         <img
@@ -2080,16 +2088,17 @@ const StartPage = memo(({ config, onStart, currentQuestionIndex }) => {
           alt="background"
           className="absolute inset-0 object-cover w-full h-full"
         />
-        <div className="relative w-full transition-all duration-300">
-          <DesktopFrame
-            imgType="start"
-            config={config}
-            currentQuestionIndex={currentQuestionIndex}
-          />
-          <button
-            className="absolute bottom-[6.5%] left-[39%] w-[22%] h-[9.5%] rounded-full"
-            onClick={onStart}
-          />
+        <div className="relative w-full transition-all duration-300 flex flex-col items-center justify-center">
+          <div className="mx-auto max-w-[800px]">
+            <DesktopFrame
+              imgType="start"
+              config={config}
+              currentQuestionIndex={currentQuestionIndex}
+            />
+          </div>
+          <button className="mt-6 w-[35%] mx-auto" onClick={onStart}>
+            <img className="start-button-float" src={config.desktop.buttons.startButton} alt="start-button-image" />
+          </button>
         </div>
       </div>
       <div className="w-full min-h-[100dvh] items-center justify-center max-w-[430px] sm:flex hidden">
@@ -2217,53 +2226,58 @@ const QuestionPage = memo(
     };
 
     const buttons = getButtonConfig(currentQuestion?.id);
+    const { text, options } = currentQuestion;
+    console.log("currentQuestion", currentQuestion);
+    console.log("buttons", buttons);
 
     return (
       <div>
-        <div className="flex w-full min-h-[100dvh] items-center justify-center sm:hidden">
+        <div className="flex w-full min-h-[100dvh] md:pt-[calc(-57.5vw+445px)] pt-[100px] justify-center sm:hidden">
           <img
             src={config.desktop.background}
             alt="background"
             className="absolute inset-0 object-cover w-full h-full"
           />
           <div className="relative w-full transition-all duration-300">
-            <div className="relative w-full h-full transition-all duration-300">
-              <DesktopFrame
-                imgType={"question_" + questionId}
-                config={config}
-              />
+            <div className="relative w-full transition-all duration-300">
+              <div className=" max-w-[600px] mx-auto">
+                <DesktopFrame
+                  imgType={"question_" + questionId}
+                  config={config}
+                />
+              </div>
+              <div className="flex flex-col items-center w-full gap-3">
+                {buttons?.map((button, index) => (
+                  <button
+                    key={index}
+                    onClick={() =>
+                      handleButtonClick(button?.score, button?.letter)
+                    }
+                    onTouchEnd={(e) => e.target.blur()}
+                    className="w-full rounded-full h-full bg-white border-4 border-[#534B49] py-2 button-float"
+                  >
+                    <span
+                      className="font-[900]"
+                      style={{ fontFamily: "sans-serif" }}
+                    >
+                      {
+                        options.filter(
+                          (option) => option.letter === button.letter
+                        )[0]?.text
+                      }
+                    </span>
+                  </button>
+                ))}
+              </div>
+
               <button
                 onClick={handleBackClick}
-                className="absolute left-1/2 w-[10%] h-[4%] transform -translate-x-1/2 bottom-[7%] "
-              />
-              <div className="absolute left-[27%] w-[46%] top-[55%] h-[24%] card:block hidden">
-                <div className="flex flex-col items-center mt-6 h-full w-full gap-3">
-                  {buttons?.map((button, index) => (
-                    <button
-                      key={index}
-                      onClick={() =>
-                        handleButtonClick(button?.score, button?.letter)
-                      }
-                      onTouchEnd={(e) => e.target.blur()}
-                      className="w-full rounded-full h-full"
-                    />
-                  ))}
-                </div>
-              </div>
-              <div className="absolute left-[27%] w-[46%] lg:top-[58%] top-[60%] h-[24%] card:hidden block">
-                <div className="flex flex-col items-center mt-6 h-full w-full gap-3">
-                  {buttons?.map((button, index) => (
-                    <button
-                      key={index}
-                      onClick={() =>
-                        handleButtonClick(button?.score, button?.letter)
-                      }
-                      onTouchEnd={(e) => e.target.blur()}
-                      className="w-full rounded-full h-full"
-                    />
-                  ))}
-                </div>
-              </div>
+                className="z-10 flex items-center justify-center gap-3 mt-3 font-bold  w-full back-button-slide"
+                style={{ fontFamily: "sans-serif" }}
+              >
+                <span className="arrow-left"></span>
+                <span>回到上一題</span>
+              </button>
             </div>
           </div>
         </div>
@@ -2273,7 +2287,7 @@ const QuestionPage = memo(
             alt="background"
             className="absolute inset-0 object-cover w-full h-full"
           />
-          <div className="relative w-full h-full transition-all duration-300">
+          <div className="relative w-full transition-all duration-300">
             <CardFrame imgType={"question_" + questionId} config={config} />
             <button
               onClick={handleBackClick}

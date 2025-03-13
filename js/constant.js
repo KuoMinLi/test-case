@@ -162,6 +162,7 @@ const STORAGE_DATA = {
         ig: "https://www.instagram.com/aromasetw/?hl=zh-tw",
         yt: "https://www.youtube.com/channel/UCQNUfzP5_AOQZzf1Rb79s5w",
         messager: "https://m.me/146697988676586",
+        ctaProduct: "https://www.aromase.com.tw/products/5%CE%B1-juniper-anti-dandruff-shampoo",
         PARTICIPATE: "https://events.aromase.com.tw/p/scalp_dandruff-285?utm_source=website&utm_medium=scalpdandruff&utm_campaign=fever",
         PRODUCT: "https://www.aromase.com.tw/categories/scalp-dandruff?utm_source=website&utm_medium=scalpdandruff&utm_campaign=product",  
       }
