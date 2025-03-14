@@ -94,7 +94,9 @@ const STORAGE_DATA = {
           background: "/test-case/images/desktop/03_心測小遊戲/03_艾瑪絲_壓力大頭皮屑也跟著控飆-01.webp",
           title: "/test-case/images/desktop/03_心測小遊戲/03_艾瑪絲_壓力大頭皮屑也跟著控飆-02.png",
           text: "/test-case/images/desktop/03_心測小遊戲/03_艾瑪絲_壓力大頭皮屑也跟著控飆-03.png",
-          card: "/test-case/images/desktop/03_心測小遊戲/網頁版_封面.jpg",
+          card: "/test-case/images/desktop/03_心測小遊戲/網頁版_封面.png",
+          startButton: "/test-case/images/desktop/03_心測小遊戲/立即測驗1@3x.png",
+          startButtonHover: "/test-case/images/desktop/03_心測小遊戲/立即測驗2@3x.png",
         },
         freeSection: {
           background: "/test-case/images/desktop/04_新品免費體驗/04_艾瑪絲_新品限量免費體驗-01.webp",

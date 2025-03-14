@@ -29,7 +29,7 @@ const handlePostData = async (data, from_quiz) => {
 
     const res = await axios.post(postUrl, formatData);
     if (res.status === 200) {
-      alert("申請成功！我們將盡快與您聯絡。");
+      alert("申請成功！\n出貨後會發送簡訊通知，請留意簡訊通知。");
     }
     if (res.status === 400) {
       alert("申請失敗，表單輸入有誤。");
@@ -419,13 +419,28 @@ const GameSection = ({ config, onCardClick = false }) => {
             className="w-[65%] h-auto"
           />
           <div className="relative">
-            <button onClick={onCardClick}>
+            <div className="relative w-full">
               <img
                 src={config.desktop.gameSection.card}
                 alt="card"
                 className="card:w-[65%] w-[80%] h-auto mx-auto max-w-[1400px]"
               />
-            </button>
+              <button
+                onClick={onCardClick}
+                className="absolute bottom-[7%] w-[17%] h-auto group left-1/2 transform -translate-x-1/2"
+              >
+                <img
+                  src={config.desktop.gameSection.startButton}
+                  alt="startButton"
+                  className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                />
+                <img
+                  src={config.desktop.gameSection.startButtonHover}
+                  alt="startButtonHover"
+                  className="w-full h-auto absolute top-0 left-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -962,8 +977,8 @@ const FreeSection = memo(({ config, handleShowNote }) => {
                   <div className="flex w-full gap-4 mb-1">
                     <div className="w-1/3">
                       <CustomInput
-                        label="郵遞區號(3碼)："
-                        placeholder=""
+                        label="郵遞區號："
+                        placeholder="共3碼"
                         onChange={handleChange}
                         value={formData.postcode}
                         name="postcode"
@@ -1062,7 +1077,7 @@ const FreeSection = memo(({ config, handleShowNote }) => {
             alt="background"
             className="relative w-full object-cover object-top bg-repeat-space sm:h-[700px] h-auto"
           />
-          <div className="absolute top-0 left-0 mx-auto rounded-lg p-6  w-full max-w-[800px]">
+          <div className="absolute top-0 mx-auto rounded-lg p-6  w-full max-w-[800px] left-1/2 transform -translate-x-1/2">
             <img
               className="absolute top-[18vw] inset-x-0 sm:h-[480px] h-auto w-full object-cover bg-repeat-y  mx-auto sm:max-w-[370px] max-w-[420px]"
               src={config.mobile.freeSection.tableBackground}
@@ -2301,9 +2316,7 @@ const QuestionPage = memo(
     };
 
     const buttons = getButtonConfig(currentQuestion?.id);
-    const { text, options } = currentQuestion;
-    console.log("currentQuestion", currentQuestion);
-    console.log("buttons", buttons);
+    const { options } = currentQuestion;
 
     return (
       <div>
