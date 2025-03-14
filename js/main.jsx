@@ -3430,7 +3430,7 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
                   id="clickToProduct1desktop"
                   className="w-full group"
                   onClick={() => {
-                    window.open(config.links.PRODUCT, "_blank");
+                    window.open(config.links.ctaProduct, "_blank");
                   }}
                 >
                   <img
@@ -3450,7 +3450,7 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
                   id="clickToProduct2desktop"
                   className="w-full group"
                   onClick={() => {
-                    window.open(config.links.PRODUCT, "_blank");
+                    window.open(config.links.ctaProduct, "_blank");
                   }}
                 >
                   <img
@@ -3487,7 +3487,7 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
                   id="clickToProduct1mobile"
                   className="w-full h-full"
                   onClick={() => {
-                    window.open(config.links.PRODUCT, "_blank");
+                    window.open(config.links.ctaProduct, "_blank");
                   }}
                 />
               </div>
@@ -3496,7 +3496,7 @@ const ResultPage = memo(({ resultImage, config, onRestart }) => {
                   id="clickToProduct2mobile"
                   className="w-full h-full"
                   onClick={() => {
-                    window.open(config.links.PRODUCT, "_blank");
+                    window.open(config.links.ctaProduct, "_blank");
                   }}
                 />
               </div>
