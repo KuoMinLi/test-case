@@ -1,0 +1,130 @@
+{
+  "1-facebook": [
+    {
+      "videoId": "598293186318226",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "description": "xxxxxxxxxxxxxxx",
+      "comingsoonImage": ""
+    }
+  ],
+  "2-fbreel": [
+    {
+      "type": "fb",
+      "reelId": "499815646498976",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "description": "xxxxxxxxxxxxxxx",
+      "comingsoonImage": ""
+    },
+    {
+      "type": "ig",
+      "reelId": "DGPUCLny3YX",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "description": "xxxxxxxxxxxxxxx",
+      "comingsoonImage": ""
+    }
+  ],
+  "3-fbreel": [
+    {
+      "type": "ig",
+      "reelId": "DGPUCLny3YX",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "description": "xxxxxxxxxxxxxxx",
+      "comingsoonImage": ""
+    },
+    {
+      "type": "ig",
+      "reelId": "DF7oawLywXJ",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "description": "xxxxxxxxxxxxxxx",
+      "comingsoonImage": ""
+    },
+    {
+      "type": "ig",
+      "reelId": "DF7oawLywXJ",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "description": "xxxxxxxxxxxxxxx",
+      "comingsoonImage": ""
+    },
+    {
+      "type": "ig",
+      "reelId": "DGPUCLny3YX",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "description": "xxxxxxxxxxxxxxx",
+      "comingsoonImage": ""
+    },
+    {
+      "type": "ig",
+      "reelId": "DF7oawLywXJ",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "description": "xxxxxxxxxxxxxxx",
+      "comingsoonImage": ""
+    },
+    {
+      "type": "ig",
+      "reelId": "DGPUCLny3YX",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "description": "xxxxxxxxxxxxxxx",
+      "comingsoonImage": ""
+    },
+    {
+      "type": "",
+      "reelId": "",
+      "titleImage": "",
+      "description": "",
+      "comingsoonImage": "https://i.imgur.com/CceQ2W7.png"
+    }
+  ],
+  "4-article": [
+    {
+      "link": "https://www.girlstalk.cc/article/75151",
+      "coverImage": "https://img.girlstalk.cc/images/author/yifang/%E5%B0%8F%E5%B7%B4%E9%BB%8Ecover(1).jpg",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "comingsoonImage": "",
+      "description": "拯救10萬個油頭女孩的夏日救星！de Balets小巴黎讓你擁有仙女香的沈浸式體驗，用過就不想再換洗髮精了！"
+    },
+    {
+      "link": "https://www.ttshow.tw/article/109079",
+      "coverImage": "https://img.ttshow.tw/images/241105.jpg",
+      "titleImage": "",
+      "comingsoonImage": "",
+      "description": "校園回憶殺！人氣插畫家霸軒懷舊聯名輕鬆小品，帶大家重溫不同年代的青春校園生活"
+    }
+  ],
+  "5-article": [
+    {
+      "link": "https://www.girlstalk.cc/article/79836",
+      "coverImage": "https://img.girlstalk.cc/images/author/Cynthia/03GT(3).png",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "comingsoonImage": "",
+      "description": "2025洗髮精推薦一次看：防斷、防屑，在家就能有沙龍級呵護，養出一頭漂亮緞光髮！"
+    },
+    {
+      "link": "https://www.girlstalk.cc/article/73218",
+      "coverImage": "https://img.girlstalk.cc/images/author/yifang/girlstalk204(9).jpg",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "comingsoonImage": "",
+      "description": "2021夏季控油洗髮精推薦！洗完髮根輕盈蓬鬆、不怕散發油頭味，油性、細軟髮必收！"
+    },
+    {
+      "link": "https://www.ttshow.tw/article/109053",
+      "coverImage": "https://img.ttshow.tw/images/FotoJet%20-%202024-11-02T160721_169.jpg",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "comingsoonImage": "",
+      "description": "原來可樂果發跡於大稻埕！聯華食品攜手大稻埕舉辦秋穫祭，結合在地小店創意，翻玩出全台獨有的新潮料理，期間限定就等你親自來嚐！"
+    },
+    {
+      "link": "https://www.ttshow.tw/article/106529",
+      "coverImage": "https://img.ttshow.tw/images/author/ron/FotoJet(149).jpg",
+      "titleImage": "https://i.imgur.com/RtFHxK2.png",
+      "comingsoonImage": "",
+      "description": "你做得到嗎！？一鏡到底連續八人成功翻瓶麥香，超難挑戰…猜猜要翻幾次才能成功?！"
+    },
+    {
+      "link": "",
+      "coverImage": "",
+      "titleImage": "",
+      "comingsoonImage": "https://i.imgur.com/CceQ2W7.png",
+      "description": ""
+    }
+  ]
+}

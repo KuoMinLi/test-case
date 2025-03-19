@@ -10,146 +10,6 @@ import ReactDOM from "https://esm.sh/react-dom@18.2.0";
 import STORAGE_DATA from "./js/constant.js";
 import STORAGE_DATA_GAME from "./js/constantGame.js";
 
-const fetchData = {
-  "1-facebook": [
-    {
-      videoId: "598293186318226",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      description: "xxxxxxxxxxxxxxx",
-      comingsoonImage: "",
-    },
-  ],
-  "2-fbreel": [
-    {
-      type: "fb",
-      reelId: "499815646498976",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      description: "xxxxxxxxxxxxxxx",
-      comingsoonImage: "",
-    },
-    {
-      type: "ig",
-      reelId: "DGPUCLny3YX",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      description: "xxxxxxxxxxxxxxx",
-      comingsoonImage: "",
-    },
-  ],
-  "3-fbreel": [
-    {
-      type: "ig",
-      reelId: "DGPUCLny3YX",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      description: "xxxxxxxxxxxxxxx",
-      comingsoonImage: "",
-    },
-    {
-      type: "ig",
-      reelId: "DF7oawLywXJ",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      description: "xxxxxxxxxxxxxxx",
-      comingsoonImage: "",
-    },
-    {
-      type: "ig",
-      reelId: "DF7oawLywXJ",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      description: "xxxxxxxxxxxxxxx",
-      comingsoonImage: "",
-    },
-    {
-      type: "ig",
-      reelId: "DGPUCLny3YX",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      description: "xxxxxxxxxxxxxxx",
-      comingsoonImage: "",
-    },
-    {
-      type: "ig",
-      reelId: "DF7oawLywXJ",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      description: "xxxxxxxxxxxxxxx",
-      comingsoonImage: "",
-    },
-    {
-      type: "ig",
-      reelId: "DGPUCLny3YX",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      description: "xxxxxxxxxxxxxxx",
-      comingsoonImage: "",
-    },
-    {
-      type: "",
-      reelId: "",
-      titleImage: "",
-      description: "",
-      comingsoonImage: "https://i.imgur.com/CceQ2W7.png",
-    },
-  ],
-  "4-article": [
-    {
-      link: "https://www.girlstalk.cc/article/75151",
-      coverImage:
-        "https://img.girlstalk.cc/images/author/yifang/%E5%B0%8F%E5%B7%B4%E9%BB%8Ecover(1).jpg",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      comingsoonImage: "",
-      description:
-        "拯救10萬個油頭女孩的夏日救星！de Balets小巴黎讓你擁有仙女香的沈浸式體驗，用過就不想再換洗髮精了！",
-    },
-    {
-      link: "https://www.ttshow.tw/article/109079",
-      coverImage: "https://img.ttshow.tw/images/241105.jpg",
-      titleImage: "",
-      comingsoonImage: "",
-      description:
-        "校園回憶殺！人氣插畫家霸軒懷舊聯名輕鬆小品，帶大家重溫不同年代的青春校園生活",
-    },
-  ],
-  "5-article": [
-    {
-      link: "https://www.girlstalk.cc/article/79836",
-      coverImage: "https://img.girlstalk.cc/images/author/Cynthia/03GT(3).png",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      comingsoonImage: "",
-      description:
-        "2025洗髮精推薦一次看：防斷、防屑，在家就能有沙龍級呵護，養出一頭漂亮緞光髮！",
-    },
-    {
-      link: "https://www.girlstalk.cc/article/73218",
-      coverImage:
-        "https://img.girlstalk.cc/images/author/yifang/girlstalk204(9).jpg",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      comingsoonImage: "",
-      description:
-        "2021夏季控油洗髮精推薦！洗完髮根輕盈蓬鬆、不怕散發油頭味，油性、細軟髮必收！",
-    },
-    {
-      link: "https://www.ttshow.tw/article/109053",
-      coverImage:
-        "https://img.ttshow.tw/images/FotoJet%20-%202024-11-02T160721_169.jpg",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      comingsoonImage: "",
-      description:
-        "原來可樂果發跡於大稻埕！聯華食品攜手大稻埕舉辦秋穫祭，結合在地小店創意，翻玩出全台獨有的新潮料理，期間限定就等你親自來嚐！",
-    },
-    {
-      link: "https://www.ttshow.tw/article/106529",
-      coverImage: "https://img.ttshow.tw/images/author/ron/FotoJet(149).jpg",
-      titleImage: "https://i.imgur.com/RtFHxK2.png",
-      comingsoonImage: "",
-      description:
-        "你做得到嗎！？一鏡到底連續八人成功翻瓶麥香，超難挑戰…猜猜要翻幾次才能成功?！",
-    },
-    {
-      link: "",
-      coverImage: "",
-      titleImage: "",
-      comingsoonImage: "https://i.imgur.com/CceQ2W7.png",
-      description: "",
-    },
-  ],
-};
-
 const defaultTitleImage = "https://i.imgur.com/RtFHxK2.png";
 const headerHightDesktop = 83.81;
 const headerHight = 57.22;
@@ -233,7 +93,7 @@ const Header = ({ config }) => {
     <div className="fixed top-0 left-0 w-full z-50">
       <header className="w-full bg-[#69B4A7] shadow-[0_8px_20px_0_rgba(65,71,66,0.6)] lg:hidden block">
         <div className="flex items-center justify-between px-4 py-2">
-          <a href="#header">
+          <a onClick={() => window.open(config.links.official)}>
             <img
               src={config.desktop.header.logo}
               alt="logo"
@@ -364,7 +224,7 @@ const Header = ({ config }) => {
       </header>
       <header className="w-full bg-[#69B4A7] shadow-[0_8px_20px_0_rgba(65,71,66,0.6)] lg:block hidden">
         <div className="flex items-center justify-between px-4 py-2">
-          <a href="#header">
+          <a onClick={() => window.open(config.links.official)}>
             <img
               src={config.mobile.header.logo}
               alt="logo"
@@ -1549,7 +1409,7 @@ const ReelItem = memo(
               className="w-full object-cover"
             />
           </div>
-          <div className="absolute -bottom-[55px] left-0 w-full max-w-[258px]">
+          <div className="mt-1 max-w-[258px] mx-auto">
             <img
               src={titleImage || defaultTitleImage}
               alt="card-title"
@@ -1565,8 +1425,7 @@ const ReelItem = memo(
         {isLoading ? <LoadingDiv /> : <></>}
         <ReelsComponent type={type} reelId={reelId} />
         <div
-          className={`absolute -bottom-[55px] left-0 w-full max-w-[258px]
-          ${isMobile ? "-bottom-[30px]" : "-bottom-[55px]"}`}
+          className="mt-1 max-w-[258px] mx-auto"
         >
           <img src={titleImage} alt="card-title" className="px-2" />
           <p className="text-[24px] text-center -mt-2">{description}</p>
@@ -1687,7 +1546,7 @@ const SwiperContent = memo(
   }
 );
 
-const VideoSection = memo(({ config }) => {
+const VideoSection = memo(({ config, fetchData }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -1697,10 +1556,13 @@ const VideoSection = memo(({ config }) => {
 
   return (
     <div className="relative w-full">
-      <div className={`lg:-mt-[${headerHight}px] -mt-[${headerHightDesktop}px] absolute top-0`} id="video" />
+      <div
+        className={`lg:-mt-[${headerHight}px] -mt-[${headerHightDesktop}px] absolute top-0`}
+        id="video"
+      />
       <div className="relative w-full lg:hidden block">
         <img
-          className="w-full object-cover bg-repeat-y object-top min-h-[2000px]"
+          className="w-full object-cover bg-repeat-y object-top min-h-[2100px]"
           src={config.desktop.videoSection.background}
           alt="background"
         />
@@ -1721,7 +1583,7 @@ const VideoSection = memo(({ config }) => {
               videoId={fetchData["1-facebook"][0].videoId}
               isMobile={false}
             />
-            <div className="w-full mx-auto -mt-[20px] relative">
+            <div className="w-full mx-auto mt-1 relative">
               <img
                 src={fetchData["1-facebook"][0].titleImage}
                 alt="card1-title"
@@ -1757,7 +1619,7 @@ const VideoSection = memo(({ config }) => {
             </div>
           </div>
 
-          <div>
+          <div className="">
             <SwiperContent
               config={config}
               data={fetchData["3-fbreel"]}
@@ -1768,7 +1630,7 @@ const VideoSection = memo(({ config }) => {
       </div>
       <div className="lg:block hidden relative w-full">
         <img
-          className="w-full h-[1700px] videoSection object-cover object-top bg-repeat-y"
+          className="w-full h-[1800px] videoSection object-cover object-top bg-repeat-y"
           src={config.mobile.videoSection.background}
           alt="background"
         />
@@ -1785,7 +1647,7 @@ const VideoSection = memo(({ config }) => {
               videoId={fetchData["1-facebook"][0].videoId}
               isMobile
             />
-            <div className="w-full mx-auto mt-[0px] relative">
+            <div className="w-full mx-auto mt-0 relative">
               <img
                 src={fetchData["1-facebook"][0].titleImage}
                 alt="card1-title"
@@ -1832,7 +1694,7 @@ const CardComponent = memo(({ data }) => {
           <img
             src={data.titleImage || defaultTitleImage}
             alt="title"
-            className="mt-1 lg:h-[36px] h-[48px] mx-auto"
+            className="mt-1 px-2 mx-auto w-full object-cover"
           />
           <p className="text-[14px] text-center my-1">{data.description}</p>
         </div>
@@ -1841,15 +1703,18 @@ const CardComponent = memo(({ data }) => {
   );
 });
 
-const RecommendSection = memo(({ config }) => {
+const RecommendSection = memo(({ config, fetchData }) => {
   return (
     <div className="relative w-full">
-      <div className={`lg:-mt-[${headerHight}px] -mt-[${headerHightDesktop}px] absolute top-0`} id="recommend" />
+      <div
+        className={`lg:-mt-[${headerHight}px] -mt-[${headerHightDesktop}px] absolute top-0`}
+        id="recommend"
+      />
       <div className="relative w-full lg:hidden block">
         <img
           src={config.desktop.recommendSection.background}
           alt="background"
-          className="relative w-full object-cover bg-repeat-y"
+          className="relative w-full h-[1100px] object-cover bg-repeat-y"
         />
         <div className="z-10 absolute top-0 left-0 w-full flex flex-col items-center justify-center">
           <img
@@ -3977,6 +3842,13 @@ const App = () => {
   const [staticJson, setStaticJson] = useState(STORAGE_DATA);
   const [showGame, setShowGame] = useState(false);
   const [isShowNote, setIsShowNote] = useState(false);
+  const [fetchData, setFetchData] = useState({
+    "1-facebook": [],
+    "2-fbreel": [],
+    "3-fbreel": [],
+    "4-article": [],
+    "5-article": [],
+  });
 
   const handleShowNote = () => {
     setIsShowNote(true);
@@ -4076,6 +3948,15 @@ const App = () => {
     return () => document.body.removeChild(script);
   }, []);
 
+  useEffect(() => {
+    fetch("./js/data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setFetchData(data);
+      })
+      .catch((error) => console.error("無法載入資料:", error));
+  }, []);
+
   return (
     <>
       {!showGame ? (
@@ -4091,8 +3972,10 @@ const App = () => {
             handleShowNote={handleShowNote}
           />
           <PrizeSection config={staticJson.config} />
-          <VideoSection config={staticJson.config} />
-          <RecommendSection config={staticJson.config} />
+          {fetchData["1-facebook"].length > 0 && (
+            <VideoSection config={staticJson.config} fetchData={fetchData} />
+          )}
+          <RecommendSection config={staticJson.config} fetchData={fetchData} />
           <LevelSection config={staticJson.config} />
           <RealSection config={staticJson.config} />
           <Footer config={staticJson.config} />
