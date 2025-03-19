@@ -1843,7 +1843,8 @@ const CardComponent = memo(({ data }) => {
 
 const RecommendSection = memo(({ config }) => {
   return (
-    <div className="relative w-full" id="recommend">
+    <div className="relative w-full">
+      <div className={`lg:-mt-[${headerHight}px] -mt-[${headerHightDesktop}px] absolute top-0`} id="recommend" />
       <div className="relative w-full lg:hidden block">
         <img
           src={config.desktop.recommendSection.background}
@@ -1854,7 +1855,7 @@ const RecommendSection = memo(({ config }) => {
           <img
             src={config.desktop.recommendSection.title}
             alt="title"
-            className="w-[80%] max-w-[1000px] mx-auto mt-[90px]"
+            className="w-[80%] max-w-[1000px] mx-auto mt-[60px]"
           />
           <img
             src={config.desktop.recommendSection.text}
