@@ -34,11 +34,12 @@ const STORAGE_DATA = {
           confirm: "/test-case/images/mobile/3按紐＿確認同意.png",
         },
         prizeSection: {
-          background: "/test-case/images/mobile/4洗後分享頁面.webp",
+          background: "/test-case/images/mobile/4洗後分享頁面-有下張底色.webp",
           cta: "/test-case/images/mobile/4按鈕＿點我參加.png",
         },
         videoSection:{
-          background: "/test-case/images/mobile/5影音直擊底圖.webp",
+          background: "/test-case/images/mobile/5影音直擊底圖.png",
+          title: "/test-case/images/mobile/5影音直擊-標題.png",
           leftArrow: "/test-case/images/mobile/5左鍵.png",
           rightArrow: "/test-case/images/mobile/5右鍵.png",
           rowCard: "/test-case/images/mobile/5橫式影片框.png",
@@ -49,6 +50,7 @@ const STORAGE_DATA = {
         },
         recommendSection: {
           background: "/test-case/images/mobile/6有感推薦底圖.webp",
+          title: "/test-case/images/mobile/6有感推薦-標題.png",
           card1title: "/test-case/images/mobile/6標題4（暫時款）.png",
           card2title: "/test-case/images/mobile/6標題5（暫時款）.png",
         },
@@ -112,7 +114,7 @@ const STORAGE_DATA = {
           confirm: "/test-case/images/desktop/04_新品免費體驗/04_艾瑪絲_新品限量免費體驗-09.png",
         },
         prizeSection: {
-          background: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-01.webp",
+          background: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-01-下張有底色.webp",
           title: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-02.png",
           text: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-03.png",
           card: "/test-case/images/desktop/05_月月抽千元/05_艾瑪絲_洗後分享月月抽千元-04.png",

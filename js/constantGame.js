@@ -19,8 +19,7 @@ const STORAGE_DATA = {
     cardResult: "/test-case/images/result/結果頁底圖-(長).png",
     formBlock: "/test-case/images/form-block.png",
     wash_share: "/test-case/images/result/wash-share-clean.png",
-    clickToParticipateBtn:
-      "/test-case/images/buttons/click-to-participate-btn.png",
+    clickToParticipateBtn: "/test-case/images/buttons/click-to-participate-btn.png",
     popup: "/test-case/images/result/手機板-POP UP.png",
     //loading
     loadingVisual: "/test-case/images/backgrounds/desktop-loading-visual.png",
@@ -253,8 +252,7 @@ const STORAGE_DATA = {
       propaganda_01: "/test-case/images/propaganda_01_light.png",
       propaganda_02: "/test-case/images/propaganda_02_water.png",
       wash_share: "/test-case/images/result/洗後分享區@3x.png",
-      clickToParticipateBtn:
-        "/test-case/images/buttons/click-to-participate-btn.png",
+      clickToParticipateBtn: "/test-case/images/buttons/click-to-participate-btn.png",
       popup: "/test-case/images/result/網頁版-POP UP.png",
       buttons: {
         startButton: "/test-case/images/result/立即測驗1@3x.png",

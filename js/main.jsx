@@ -10,6 +10,147 @@ import ReactDOM from "https://esm.sh/react-dom@18.2.0";
 import STORAGE_DATA from "./js/constant.js";
 import STORAGE_DATA_GAME from "./js/constantGame.js";
 
+const fetchData = {
+  "1-facebook": [
+    {
+      videoId: "598293186318226",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      description: "xxxxxxxxxxxxxxx",
+      comingsoonImage: "",
+    },
+  ],
+  "2-fbreel": [
+    {
+      type: "fb",
+      reelId: "499815646498976",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      description: "xxxxxxxxxxxxxxx",
+      comingsoonImage: "",
+    },
+    {
+      type: "ig",
+      reelId: "DGPUCLny3YX",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      description: "xxxxxxxxxxxxxxx",
+      comingsoonImage: "",
+    },
+  ],
+  "3-fbreel": [
+    {
+      type: "ig",
+      reelId: "DGPUCLny3YX",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      description: "xxxxxxxxxxxxxxx",
+      comingsoonImage: "",
+    },
+    {
+      type: "ig",
+      reelId: "DF7oawLywXJ",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      description: "xxxxxxxxxxxxxxx",
+      comingsoonImage: "",
+    },
+    {
+      type: "ig",
+      reelId: "DF7oawLywXJ",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      description: "xxxxxxxxxxxxxxx",
+      comingsoonImage: "",
+    },
+    {
+      type: "ig",
+      reelId: "DGPUCLny3YX",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      description: "xxxxxxxxxxxxxxx",
+      comingsoonImage: "",
+    },
+    {
+      type: "ig",
+      reelId: "DF7oawLywXJ",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      description: "xxxxxxxxxxxxxxx",
+      comingsoonImage: "",
+    },
+    {
+      type: "ig",
+      reelId: "DGPUCLny3YX",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      description: "xxxxxxxxxxxxxxx",
+      comingsoonImage: "",
+    },
+    {
+      type: "",
+      reelId: "",
+      titleImage: "",
+      description: "",
+      comingsoonImage: "https://i.imgur.com/CceQ2W7.png",
+    },
+  ],
+  "4-article": [
+    {
+      link: "https://www.girlstalk.cc/article/75151",
+      coverImage:
+        "https://img.girlstalk.cc/images/author/yifang/%E5%B0%8F%E5%B7%B4%E9%BB%8Ecover(1).jpg",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      comingsoonImage: "",
+      description:
+        "拯救10萬個油頭女孩的夏日救星！de Balets小巴黎讓你擁有仙女香的沈浸式體驗，用過就不想再換洗髮精了！",
+    },
+    {
+      link: "https://www.ttshow.tw/article/109079",
+      coverImage: "https://img.ttshow.tw/images/241105.jpg",
+      titleImage: "",
+      comingsoonImage: "",
+      description:
+        "校園回憶殺！人氣插畫家霸軒懷舊聯名輕鬆小品，帶大家重溫不同年代的青春校園生活",
+    },
+  ],
+  "5-article": [
+    {
+      link: "https://www.girlstalk.cc/article/79836",
+      coverImage: "https://img.girlstalk.cc/images/author/Cynthia/03GT(3).png",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      comingsoonImage: "",
+      description:
+        "2025洗髮精推薦一次看：防斷、防屑，在家就能有沙龍級呵護，養出一頭漂亮緞光髮！",
+    },
+    {
+      link: "https://www.girlstalk.cc/article/73218",
+      coverImage:
+        "https://img.girlstalk.cc/images/author/yifang/girlstalk204(9).jpg",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      comingsoonImage: "",
+      description:
+        "2021夏季控油洗髮精推薦！洗完髮根輕盈蓬鬆、不怕散發油頭味，油性、細軟髮必收！",
+    },
+    {
+      link: "https://www.ttshow.tw/article/109053",
+      coverImage:
+        "https://img.ttshow.tw/images/FotoJet%20-%202024-11-02T160721_169.jpg",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      comingsoonImage: "",
+      description:
+        "原來可樂果發跡於大稻埕！聯華食品攜手大稻埕舉辦秋穫祭，結合在地小店創意，翻玩出全台獨有的新潮料理，期間限定就等你親自來嚐！",
+    },
+    {
+      link: "https://www.ttshow.tw/article/106529",
+      coverImage: "https://img.ttshow.tw/images/author/ron/FotoJet(149).jpg",
+      titleImage: "https://i.imgur.com/RtFHxK2.png",
+      comingsoonImage: "",
+      description:
+        "你做得到嗎！？一鏡到底連續八人成功翻瓶麥香，超難挑戰…猜猜要翻幾次才能成功?！",
+    },
+    {
+      link: "",
+      coverImage: "",
+      titleImage: "",
+      comingsoonImage: "https://i.imgur.com/CceQ2W7.png",
+      description: "",
+    },
+  ],
+};
+
+const defaultTitleImage = "https://i.imgur.com/RtFHxK2.png";
 const headerHightDesktop = 83.81;
 const headerHight = 57.22;
 
@@ -1243,46 +1384,235 @@ const FreeSection = memo(({ config, handleShowNote }) => {
   );
 });
 
-const SwiperContent = ({
-  config,
-  data,
-  initialNumber = 3,
-  id = "default",
-  className = "",
-}) => {
-  const [slidesPerView, setSlidesPerView] = useState(initialNumber); // 預設顯示 3 個
-  const swiperRef = useRef(null);
-  const swiperInstanceRef = useRef(null);
+const styles = {
+  fbSection: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "338px",
+    width: "100%",
+  },
+  fbSectionMobile: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "200px",
+    width: "100%",
+  },
+  reelSection: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "465px",
+    width: "100%",
+  },
+  igIframeDeco: {
+    position: "relative",
+    borderRadius: "10px",
+    maxWidth: "258px",
+    width: "80vw",
+    margin: "auto",
+  },
+  iframeIgReels: {
+    height: "465px",
+  },
+  igReel: {
+    height: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+  },
+  iframeFbDeco: {
+    position: "relative",
+    borderRadius: "10px",
+    maxWidth: "600px",
+    width: "90%",
+    margin: "auto",
+  },
+  iframeFbDecoMobile: {
+    position: "relative",
+    borderRadius: "10px",
+    maxWidth: "430px",
+    margin: "auto",
+    width: "80vw",
+    margin: "auto",
+  },
+  fbVideos: {
+    borderRadius: "10px",
+    overflow: "hidden",
+  },
+  fbReels: {
+    borderRadius: "10px",
+    overflow: "hidden",
+  },
+  fbReelContainer: {
+    position: "relative",
+    borderRadius: "10px",
+    maxWidth: "258px",
+    margin: "auto",
+    height: "465px",
+  },
+};
 
-  const nextButtonClass = `carousel-next-${id}`;
-  const prevButtonClass = `carousel-prev-${id}`;
+const FacebookReelsSection = memo(({ reelId }) => (
+  <section
+    id="FacebookReels"
+    className="facebook-reels"
+    style={styles.reelSection}
+  >
+    <div style={styles.fbReelContainer}>
+      <div
+        className="fb-video"
+        data-href={`https://www.facebook.com/reel/${reelId}/`}
+        data-width="258"
+        data-height="465"
+        data-show-text="false"
+      ></div>
+    </div>
+  </section>
+));
 
-  const handleResize = () => {
-    const width = window.innerWidth;
-    if (width < 800) {
-      setSlidesPerView(1);
-    } else {
-      setSlidesPerView(initialNumber);
+const IGReelsSection = memo(({ reelId }) => (
+  <section id="FBReels">
+    <div style={{ ...styles.igIframeDeco, ...styles.iframeIgReels }}>
+      <div style={styles.igReel}>
+        <iframe
+          src={`https://www.instagram.com/reel/${reelId}/embed`}
+          frameBorder="0"
+          style={{
+            height: "150%",
+            width: "150%",
+            marginTop: "-55px",
+            marginLeft: "-57px",
+          }}
+        ></iframe>
+      </div>
+    </div>
+  </section>
+));
+
+const FbVideoSection = memo(({ videoId, isMobile }) => {
+  if (isMobile) {
+    return (
+      <section id="FbVideo" className="fbVideo" style={styles.fbSectionMobile}>
+        <div style={styles.iframeFbDecoMobile}>
+          <div
+            className="fb-video"
+            data-href={`https://www.facebook.com/FacebookDevelopers/videos/${videoId}/`}
+            data-allowfullscreen="false"
+          ></div>
+        </div>
+      </section>
+    );
+  }
+  return (
+    <section id="FbVideo" className="fbVideo" style={styles.fbSection}>
+      <div style={{ ...styles.iframeFbDeco, ...styles.fbVideos }}>
+        <div
+          className="fb-video"
+          data-href={`https://www.facebook.com/FacebookDevelopers/videos/${videoId}/`}
+          data-allowfullscreen="false"
+        ></div>
+      </div>
+    </section>
+  );
+});
+
+const LoadingDiv = memo(() => (
+  <div className="w-[258px] h-[465px] bg-gray-300"></div>
+));
+
+const ReelsComponent = memo(({ type, reelId }) => {
+  if (type === "fb") {
+    return <FacebookReelsSection reelId={reelId} />;
+  } else if (type === "ig") {
+    return <IGReelsSection reelId={reelId} />;
+  }
+});
+
+const ReelItem = memo(
+  ({
+    isLoading,
+    type,
+    reelId,
+    titleImage,
+    description,
+    comingsoonImage,
+    isMobile,
+  }) => {
+    if (type === "" || reelId === "") {
+      return (
+        <div className="relative mx-1">
+          <div className="w-[258px] h-[465px]">
+            <img
+              src={comingsoonImage}
+              alt="coming-soon"
+              className="w-full object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-[55px] left-0 w-full max-w-[258px]">
+            <img
+              src={titleImage || defaultTitleImage}
+              alt="card-title"
+              className="px-2"
+            />
+            <p className="text-[24px] text-center -mt-2">{description}</p>
+          </div>
+        </div>
+      );
     }
-  };
+    return (
+      <div className="relative mx-1">
+        {isLoading ? <LoadingDiv /> : <></>}
+        <ReelsComponent type={type} reelId={reelId} />
+        <div
+          className={`absolute -bottom-[55px] left-0 w-full max-w-[258px]
+          ${isMobile ? "-bottom-[30px]" : "-bottom-[55px]"}`}
+        >
+          <img src={titleImage} alt="card-title" className="px-2" />
+          <p className="text-[24px] text-center -mt-2">{description}</p>
+        </div>
+      </div>
+    );
+  }
+);
 
-  useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
+const SwiperContent = memo(
+  ({
+    config,
+    data,
+    initialNumber = 3,
+    id = "default",
+    className = "",
+    isMobile = false,
+    type = "reel",
+  }) => {
+    const [slidesPerView, setSlidesPerView] = useState(initialNumber);
+    const swiperRef = useRef(null);
+    const swiperInstanceRef = useRef(null);
+    const isArticle = type === "article";
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
+    const nextButtonClass = `carousel-next-${id}`;
+    const prevButtonClass = `carousel-prev-${id}`;
+
+    const handleResize = () => {
+      setSlidesPerView(window.innerWidth < 1200 ? 1 : initialNumber);
     };
-  }, []);
 
-  useEffect(() => {
-    if (swiperRef.current) {
+    useEffect(() => {
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, [initialNumber]);
+
+    useEffect(() => {
+      if (!swiperRef.current) return;
+
       if (swiperInstanceRef.current) {
         swiperInstanceRef.current.destroy(true, true);
       }
 
       swiperInstanceRef.current = new Swiper(swiperRef.current, {
-        slidesPerView: slidesPerView,
+        slidesPerView,
         spaceBetween: 20,
         centeredSlides: false,
         loop: true,
@@ -1291,148 +1621,222 @@ const SwiperContent = ({
           prevEl: `.${prevButtonClass}`,
         },
       });
-    }
 
-    // 組件卸載時清理
-    return () => {
-      if (swiperInstanceRef.current) {
-        swiperInstanceRef.current.destroy(true, true);
-      }
-    };
-  }, [slidesPerView, nextButtonClass, prevButtonClass]);
+      return () => {
+        if (swiperInstanceRef.current) {
+          swiperInstanceRef.current.destroy(true, true);
+        }
+      };
+    }, [slidesPerView, nextButtonClass, prevButtonClass]);
 
-  // 生成輪播項目
-  const items = data.map((item) => (
-    <div className="swiper-slide" key={item.id}>
-      <div className="card">
-        <div className="relative mx-1">
-          <img src={config.desktop.videoSection.columnCard} alt="column-card" />
-          <img
-            src={config.desktop.videoSection.card2title}
-            alt="card2-title"
-            className="absolute -bottom-4 left-0 px-6"
-          />
+    const items = data.map((item) => (
+      <div className="swiper-slide" key={item.id}>
+        <div className="card">
+          {isArticle ? (
+            <CardComponent data={item} />
+          ) : (
+            <ReelItem
+              isLoading={false}
+              type={item.type}
+              reelId={item.reelId}
+              titleImage={item.titleImage}
+              comingsoonImage={item.comingsoonImage}
+              isMobile={isMobile}
+              description="xxxxxxxxxxxxxxx"
+            />
+          )}
         </div>
-        <p className="text-[30px] text-center my-3">xxxxxxxxxxxxxxx</p>
       </div>
-    </div>
-  ));
+    ));
 
-  return (
-    <div className={`carousel-container ${className}`}>
-      <div className="carousel">
-        <div className="swiper" ref={swiperRef}>
-          <div className="swiper-wrapper">{items}</div>
+    return (
+      <div
+        className={`carousel-container ${className} ${
+          isArticle ? "article" : ""
+        }`}
+      >
+        <div className="carousel">
+          <div className="swiper" ref={swiperRef}>
+            <div className="swiper-wrapper">{items}</div>
+          </div>
+          <button
+            className={`carousel-button ${prevButtonClass} ${
+              isArticle ? "article" : ""
+            }`}
+          >
+            <img
+              className="start-button button-width"
+              src={config.desktop.videoSection.leftArrow}
+              alt="left-arrow"
+            />
+          </button>
+          <button
+            className={`carousel-button ${nextButtonClass} ${
+              isArticle ? "article" : ""
+            }`}
+          >
+            <img
+              className="start-button button-width"
+              src={config.desktop.videoSection.rightArrow}
+              alt="right-arrow"
+            />
+          </button>
         </div>
-        <button className={`carousel-button ${prevButtonClass}`}>
-          <img
-            className="start-button button-width"
-            src={config.desktop.videoSection.leftArrow}
-            alt="left-arrow"
-          />
-        </button>
-        <button className={`carousel-button ${nextButtonClass}`}>
-          <img
-            className="start-button button-width"
-            src={config.desktop.videoSection.rightArrow}
-            alt="right-arrow"
-          />
-        </button>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);
 
 const VideoSection = memo(({ config }) => {
-  const carouselData = [
-    { id: 1, title: "GIRSTALK", number: 4 },
-    { id: 2, title: "肌肉山山", number: 5 },
-    { id: 3, title: "紫冠廷", number: 6 },
-  ];
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="relative w-full">
-      <div className={`mt-[${headerHight}px]`} id="video" />
-      <div className="relative w-full">
+      <div className={`lg:-mt-[${headerHight}px] -mt-[${headerHightDesktop}px] absolute top-0`} id="video" />
+      <div className="relative w-full lg:hidden block">
         <img
-          className="w-full h-[1900px] object-cover bg-repeat-y object-top lg:hidden block"
+          className="w-full object-cover bg-repeat-y object-top min-h-[2000px]"
           src={config.desktop.videoSection.background}
           alt="background"
         />
-        <img
-          className="w-full videoSection object-cover object-top bg-repeat-y lg:block hidden"
-          src={config.mobile.videoSection.background}
-          alt="background"
-        />
-        <div className="z-10 absolute w-full h-full top-0 left-0 flex flex-col items-center ">
+        <div className="z-10 absolute w-full h-full top-0 left-0 flex flex-col items-center">
           <img
             src={config.desktop.videoSection.title}
             alt="title"
-            className="w-1/2 mx-auto mb-1 mt-[60px] lg:hidden block"
+            className="w-1/2 mx-auto mb-1 mt-[60px]"
           />
           <img
             src={config.desktop.videoSection.text}
             alt="text"
-            className="w-1/2 mx-auto lg:hidden block"
+            className="w-1/2 mx-auto"
           />
-          <div className="relative card:w-[80%] w-1/2 max-w-[878px] mx-1 lg:mt-[27vw] mt-0">
-            <img
-              src={config.desktop.videoSection.rowCard}
-              alt="row-card"
-              className="w-full"
+
+          <div className="relative w-full mx-auto mt-3 mb-7">
+            <FbVideoSection
+              videoId={fetchData["1-facebook"][0].videoId}
+              isMobile={false}
             />
-            <img
-              src={config.desktop.videoSection.card1title}
-              alt="card1-title"
-              className="absolute -bottom-4 left-1/4 w-1/2 "
-            />
-          </div>
-          <p className="text-[30px] my-3">xxxxxxxxxxxxxxx</p>
-          <div className="flex justify-center items-center gap-[60px] max-w-[878px] card:hidden block">
-            <div>
-              <div className="relative mx-1">
-                <img
-                  src={config.desktop.videoSection.columnCard}
-                  alt="column-card"
-                  className="max-w-[258px]"
-                />
-                <img
-                  src={config.desktop.videoSection.card2title}
-                  alt="card2-title"
-                  className="absolute -bottom-4 left-0 px-6"
-                />
-              </div>
-              <p className="text-[30px] text-center my-3">xxxxxxxxxxxxxxx</p>
-            </div>
-            <div>
-              <div className="relative mx-1">
-                <img
-                  src={config.desktop.videoSection.columnCard}
-                  alt="column-card"
-                  className="max-w-[258px]"
-                />
-                <img
-                  src={config.desktop.videoSection.card3title}
-                  alt="card3-title"
-                  className="absolute -bottom-4 left-0 px-6"
-                />
-              </div>
-              <p className="text-[30px] text-center my-3">xxxxxxxxxxxxxxx</p>
+            <div className="w-full mx-auto -mt-[20px] relative">
+              <img
+                src={fetchData["1-facebook"][0].titleImage}
+                alt="card1-title"
+                className="h-[42px] mx-auto"
+              />
+              <p className="text-[24px] text-center -mt-2">
+                {fetchData["1-facebook"][0].description}
+              </p>
             </div>
           </div>
-          <div className="card:block hidden">
+
+          <div className="mb-[80px]">
+            <div className="flex justify-center items-center gap-[84px] max-w-[878px]">
+              {fetchData["2-fbreel"].map((reel, index) => (
+                <ReelItem
+                  key={index}
+                  isLoading={isLoading}
+                  type={reel.type}
+                  reelId={reel.reelId}
+                  titleImage={reel["titleImage"]}
+                  comingsoonImage={reel["comingsoonImage"]}
+                  description={reel["description"]}
+                />
+              ))}
+            </div>
+            <div className="lg:block hidden">
+              <SwiperContent
+                config={config}
+                data={fetchData["2-fbreel"]}
+                initialNumber={1}
+                id="master"
+              />
+            </div>
+          </div>
+
+          <div>
             <SwiperContent
               config={config}
-              data={carouselData}
-              initialNumber={1}
-              id="master"
+              data={fetchData["3-fbreel"]}
+              id="star"
             />
-          </div>
-          <div className="max-h-[432px]">
-            <SwiperContent config={config} data={carouselData} id="star" />
           </div>
         </div>
       </div>
+      <div className="lg:block hidden relative w-full">
+        <img
+          className="w-full h-[1700px] videoSection object-cover object-top bg-repeat-y"
+          src={config.mobile.videoSection.background}
+          alt="background"
+        />
+
+        <div className="z-10 absolute w-full h-full top-0 left-0 flex flex-col items-center">
+          <img
+            src={config.mobile.videoSection.title}
+            alt="title"
+            className="w-[95%] max-w-[600px] mx-auto mb-1 mt-[60px]"
+          />
+
+          <div className="relative w-full mx-auto mt-3 mb-7">
+            <FbVideoSection
+              videoId={fetchData["1-facebook"][0].videoId}
+              isMobile
+            />
+            <div className="w-full mx-auto mt-[0px] relative">
+              <img
+                src={fetchData["1-facebook"][0].titleImage}
+                alt="card1-title"
+                className="h-[42px] mx-auto"
+              />
+              <p className="text-[24px] text-center -mt-2">
+                {fetchData["1-facebook"][0].description}
+              </p>
+            </div>
+          </div>
+          <div className="">
+            <SwiperContent
+              config={config}
+              data={fetchData["2-fbreel"]}
+              initialNumber={1}
+              id="masterMobile"
+              isMobile={true}
+            />
+          </div>
+          <div>
+            <SwiperContent
+              config={config}
+              data={fetchData["3-fbreel"]}
+              id="starMobile"
+              isMobile={true}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+});
+
+const CardComponent = memo(({ data }) => {
+  return (
+    <div className="relative w-full">
+      <a href={data.link} target="_blank" rel="noreferrer">
+        <div className="max-w-[280px] mx-auto">
+          <img
+            src={data.coverImage || data.comingsoonImage}
+            alt="img"
+            className="w-full h-[165px] object-cover"
+          />
+          <img
+            src={data.titleImage || defaultTitleImage}
+            alt="title"
+            className="mt-1 lg:h-[36px] h-[48px] mx-auto"
+          />
+          <p className="text-[14px] text-center my-1">{data.description}</p>
+        </div>
+      </a>
     </div>
   );
 });
@@ -1444,77 +1848,32 @@ const RecommendSection = memo(({ config }) => {
         <img
           src={config.desktop.recommendSection.background}
           alt="background"
-          className="absolute relative w-full object-cover bg-repeat-y"
+          className="relative w-full object-cover bg-repeat-y"
         />
         <div className="z-10 absolute top-0 left-0 w-full flex flex-col items-center justify-center">
           <img
             src={config.desktop.recommendSection.title}
             alt="title"
-            className="w-1/2 mt-[60px]"
+            className="w-[80%] max-w-[1000px] mx-auto mt-[90px]"
           />
           <img
             src={config.desktop.recommendSection.text}
             alt="text"
-            className="w-1/2"
+            className="w-[60%] max-w-[700px] mx-auto mt-[10px]"
           />
-          <div className="flex justify-center items-center gap-[60px]">
-            <div className="max-w-[320px] mx-auto">
-              <img
-                src={config.desktop.recommendSection.rowCard}
-                alt="row-card"
-              />
-              <img
-                src={config.desktop.recommendSection.card1title}
-                alt="card1-title"
-              />
-              <p className="text-[30px] text-center my-1">xxxxxxxxxxxxxxx</p>
-            </div>
-            <div className="max-w-[320px] mx-auto">
-              <img
-                src={config.desktop.recommendSection.rowCard}
-                alt="row-card"
-              />
-              <img
-                src={config.desktop.recommendSection.card2title}
-                alt="card2-title"
-              />
-              <p className="text-[30px] text-center my-1">xxxxxxxxxxxxxxx</p>
-            </div>
+          <div className="flex justify-center items-start mt-7 gap-5 mb-8">
+            {fetchData["4-article"].map((article, index) => (
+              <CardComponent key={index} data={article} />
+            ))}
           </div>
-          <div className="flex justify-center items-center gap-[60px]">
-            <div className="max-w-[320px] mx-auto">
-              <img
-                src={config.desktop.recommendSection.rowCard}
-                alt="row-card"
-              />
-              <img
-                src={config.desktop.recommendSection.card3title}
-                alt="card3-title"
-              />
-              <p className="text-[30px] text-center my-1">xxxxxxxxxxxxxxx</p>
-            </div>
-            <div className="max-w-[320px] mx-auto">
-              <img
-                src={config.desktop.recommendSection.rowCard}
-                alt="row-card"
-              />
-              <img
-                src={config.desktop.recommendSection.card4title}
-                alt="card4-title"
-              />
-              <p className="text-[30px] text-center my-1">xxxxxxxxxxxxxxx</p>
-            </div>
-            <div className="max-w-[320px] mx-auto">
-              <img
-                src={config.desktop.recommendSection.rowCard}
-                alt="row-card"
-              />
-              <img
-                src={config.desktop.recommendSection.card5title}
-                alt="card5-title"
-              />
-              <p className="text-[30px] text-center my-1">xxxxxxxxxxxxxxx</p>
-            </div>
+          <div className="flex justify-center items-start gap-5">
+            <SwiperContent
+              config={config}
+              data={fetchData["5-article"]}
+              initialNumber={3}
+              id="article"
+              type="article"
+            />
           </div>
         </div>
       </div>
@@ -1524,30 +1883,31 @@ const RecommendSection = memo(({ config }) => {
           alt="background"
           className="relative recommendSection w-full object-cover object-top bg-repeat-y"
         />
-        <div className="absolute top-0 left-0 flex flex-col items-center justify-center w-full mt-[30vw]">
-          <div className="flex flex-col mt-[50px] items-center gap-[30px] w-[70%]">
-            <div className="max-w-[320px] mx-auto">
-              <img
-                src={config.desktop.recommendSection.rowCard}
-                alt="row-card"
-              />
-              <img
-                src={config.mobile.recommendSection.card1title}
-                alt="card1-title"
-              />
-              <p className="text-[30px] text-center my-1">xxxxxxxxxxxxxxx</p>
-            </div>
-            <div className="max-w-[320px] mx-auto">
-              <img
-                src={config.desktop.recommendSection.rowCard}
-                alt="row-card"
-              />
-              <img
-                src={config.mobile.recommendSection.card2title}
-                alt="card2-title"
-              />
-              <p className="text-[30px] text-center my-1">xxxxxxxxxxxxxxx</p>
-            </div>
+        <div className="absolute top-0 left-0 flex flex-col items-center justify-center w-full mt-[40px]">
+          <img
+            src={config.mobile.recommendSection.title}
+            alt="title"
+            className="w-[95%] max-w-[430px] mx-auto"
+          />
+          <div className="mt-[20px]">
+            <SwiperContent
+              config={config}
+              data={fetchData["4-article"]}
+              initialNumber={1}
+              id="article4Mobile"
+              isMobile={true}
+              type="article"
+            />
+          </div>
+          <div className="">
+            <SwiperContent
+              config={config}
+              data={fetchData["5-article"]}
+              initialNumber={1}
+              id="article5Mobile"
+              isMobile={true}
+              type="article"
+            />
           </div>
         </div>
       </div>
@@ -3705,6 +4065,16 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.defer = true;
+    script.src =
+      "https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v22.0";
+    document.body.appendChild(script);
+    return () => document.body.removeChild(script);
+  }, []);
+
   return (
     <>
       {!showGame ? (
@@ -3720,8 +4090,8 @@ const App = () => {
             handleShowNote={handleShowNote}
           />
           <PrizeSection config={staticJson.config} />
-          {/* <VideoSection config={staticJson.config} />
-          <RecommendSection config={staticJson.config} /> */}
+          <VideoSection config={staticJson.config} />
+          <RecommendSection config={staticJson.config} />
           <LevelSection config={staticJson.config} />
           <RealSection config={staticJson.config} />
           <Footer config={staticJson.config} />
